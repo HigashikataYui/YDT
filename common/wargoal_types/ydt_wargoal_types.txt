@@ -1,0 +1,30 @@
+ydt_scarlet_invasion_wargoal = {
+    type = take_capital
+    attacker = {
+        badboy_factor = 0.90
+        prestige_factor = 2.00
+        peace_cost_factor = 0.90
+        allowed_provinces = {
+            always = yes
+        }
+        peace_options = {
+            po_demand_provinces
+        }
+        country_desc = YDT_SCARLET_INVASION_COUNTRIES
+        prov_desc = ALL_PROVS
+    }
+    defender = {
+        badboy_factor = 1.00
+        prestige_factor = 1.00
+        peace_cost_factor = 1.00
+        allowed_provinces = {
+            always = yes
+        }
+        peace_options = {
+            po_demand_provinces
+        }
+        country_desc = YDT_SCARLET_INVASION_COUNTRIES
+        prov_desc = ALL_PROVS
+    }
+    war_name = YDT_SCARLET_INVASION_WAR_NAME
+}

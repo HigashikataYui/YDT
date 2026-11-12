@@ -1,0 +1,103 @@
+ydt_scarlet_mechanic = {
+    alert_icon_gfx = GFX_alerticons_government_mechanics
+    alert_icon_index = 10
+    available = {
+        has_reform = ydt_scarlet_autocracy
+    }
+    powers = {
+        ydt_scarlet_value = {
+            min = 0
+            max = 100
+            default = 0
+            base_monthly_growth = 0
+            reset_on_new_ruler = no
+            show_before_interactions = yes
+            is_good = yes
+            scaled_modifier = {
+                modifier = {
+                    ae_impact = 0.20
+                    fire_damage = 0.20
+                    global_unrest = 2
+                    land_morale = 0.10
+                }
+            }
+			range_modifier = {
+				trigger = {
+					4531 = {
+						owned_by = ROOT
+						controlled_by = ROOT
+						NOT = { development = 20 }
+					}
+				}
+				start_value = 0
+				end_value = 100
+				modifier = {
+					monthly_ydt_scarlet_value = -0.2
+				}
+			}
+			range_modifier = {
+				trigger = {
+					4531 = {
+						owned_by = ROOT
+						controlled_by = ROOT
+						development = 20
+					}
+				}
+				start_value = 0
+				end_value = 100
+				modifier = {
+					monthly_ydt_scarlet_value = 0.1
+				}
+			}
+			range_modifier = {
+				trigger = {
+					4531 = {
+						owned_by = ROOT
+						NOT = { controlled_by = ROOT }
+					}
+				}
+				start_value = 0
+				end_value = 100
+				modifier = {
+					monthly_ydt_scarlet_value = -10
+				}
+			}
+			range_modifier = {
+				trigger = {
+					4531 = {
+						NOT = { owned_by = ROOT }
+					}
+				}
+				start_value = 0
+				end_value = 100
+				modifier = {
+					monthly_ydt_scarlet_value = -100
+				}
+			}
+        }
+    }
+    interactions = {
+        ydt_boost_scarlet_value = {
+            icon = GFX_prussian_militarization_upgrade
+            trigger = {
+                mil_power = 100
+                NOT = {
+                    has_government_power = {
+                        mechanic_type = ydt_scarlet_mechanic
+                        power_type = ydt_scarlet_value
+                        value = 100
+                    }
+                }
+            }
+            effect = {
+                add_mil_power = -100
+                add_government_power = {
+                    mechanic_type = ydt_scarlet_mechanic
+                    power_type = ydt_scarlet_value
+                    value = 10
+                }
+            }
+            cooldown_years = 0
+        }
+    }
+}

@@ -1,0 +1,73 @@
+ydt_lunar_war = {
+    potential = {
+        has_country_flag = ydt_remilia
+
+        NOT = {
+            has_country_flag = ydt_lunar_war_completed
+        }
+    }
+    can_start = {
+        has_any_disaster = no
+        custom_trigger_tooltip = {
+			tooltip = ydt_meiling_joined_tt
+			has_country_flag = ydt_found_meiling
+		}
+		custom_trigger_tooltip = {
+			tooltip = ydt_patchouli_joined_tt
+			has_country_flag = ydt_found_patchouli
+		}
+		custom_trigger_tooltip = {
+			tooltip = ydt_sakuya_joined_tt
+			has_country_flag = ydt_found_sakuya
+		}
+    }
+    can_stop = {
+        custom_trigger_tooltip = {
+			tooltip = ydt_meiling_not_joined_tt
+			NOT = { has_country_flag = ydt_found_meiling }
+		}
+		custom_trigger_tooltip = {
+			tooltip = ydt_patchouli_not_joined_tt
+			NOT = { has_country_flag = ydt_found_patchouli }
+		}
+		custom_trigger_tooltip = {
+			tooltip = ydt_sakuya_not_joined_tt
+			NOT = { has_country_flag = ydt_found_sakuya }
+		}
+    }
+    progress = {
+        modifier = {
+            factor = 3
+			custom_trigger_tooltip = {
+				tooltip = ydt_meiling_joined_tt
+				has_country_flag = ydt_found_meiling
+			}
+			custom_trigger_tooltip = {
+				tooltip = ydt_patchouli_joined_tt
+				has_country_flag = ydt_found_patchouli
+			}
+			custom_trigger_tooltip = {
+				tooltip = ydt_sakuya_joined_tt
+				has_country_flag = ydt_found_sakuya
+			}
+        }
+    }
+    can_end = {
+        custom_trigger_tooltip = {
+            tooltip = ydt_lunar_war_five_years_tt
+
+            had_country_flag = {
+                flag = ydt_lunar_war_started
+                days = 1825
+            }
+        }
+    }
+    modifier = {
+        stability_cost_modifier = 0.50
+        global_tax_modifier = -0.50
+        land_morale = -0.10
+        fire_damage = 0.20
+    }
+    on_start = ydt_lunar_war.1
+    on_end = ydt_lunar_war.2
+}

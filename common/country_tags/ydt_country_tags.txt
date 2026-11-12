@@ -1,0 +1,4 @@
+YBP = "countries/YDT Balkan Province.txt"
+YPP = "countries/YDT Prussian Province.txt"
+YGP = "countries/YDT Greek Province.txt"
+YRP = "countries/YDT Russian Province.txt"

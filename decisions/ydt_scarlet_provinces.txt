@@ -1,0 +1,337 @@
+country_decisions = {
+    ydt_establish_balkan_province = {
+        major = yes
+        potential = {
+            tag = WAL
+            has_country_flag = ydt_unlocked_scarlet_provinces
+            mission_completed = ydt_march_into_the_balkans
+            NOT = {
+                has_country_flag = ydt_established_balkan_province
+            }
+            NOT = {
+                exists = YBP
+            }
+        }
+		provinces_to_highlight = {
+			OR = {
+				area = slavonia_area
+				area = croatia_area
+				area = east_adriatic_coast_area
+				area = bosnia_area
+				area = serbia_area
+				area = rascia_area
+			}
+			NOT = { owned_by = ROOT }
+		}
+        allow = {
+            is_subject = no
+            is_at_war = no
+            slavonia_area = {
+                type = all
+                owned_by = ROOT
+            }
+            croatia_area = {
+                type = all
+                owned_by = ROOT
+            }
+            east_adriatic_coast_area = {
+                type = all
+                owned_by = ROOT
+            }
+            bosnia_area = {
+                type = all
+                owned_by = ROOT
+            }
+            serbia_area = {
+                type = all
+                owned_by = ROOT
+            }
+            rascia_area = {
+                type = all
+                owned_by = ROOT
+            }
+        }
+        effect = {
+            custom_tooltip = ydt_establish_balkan_province_tt
+            hidden_effect = {
+                # Add cores before release.
+                every_owned_province = {
+                    limit = {
+                        OR = {
+                            area = slavonia_area
+                            area = croatia_area
+                            area = east_adriatic_coast_area
+                            area = bosnia_area
+                            area = serbia_area
+                            area = rascia_area
+                        }
+                    }
+                    add_core = YBP
+                }
+                release = YBP
+                every_owned_province = {
+                    limit = {
+                        OR = {
+                            area = slavonia_area
+                            area = croatia_area
+                            area = east_adriatic_coast_area
+                            area = bosnia_area
+                            area = serbia_area
+                            area = rascia_area
+                        }
+                    }
+                    cede_province = YBP
+                }
+                create_subject = {
+                    subject_type = ydt_scarlet_province
+                    subject = YBP
+                }
+                YBP = {
+                    change_government = monarchy
+                    add_government_reform = ydt_scarlet_province_reform
+                    change_religion = ROOT
+
+                    set_capital = 4239
+
+                    every_owned_province = {
+                        add_core = YBP
+                    }
+                }
+                set_country_flag = ydt_established_balkan_province
+            }
+        }
+    }
+	
+	ydt_establish_prussian_province = {
+		major = yes
+		potential = {
+			tag = WAL
+			has_country_flag = ydt_unlocked_scarlet_provinces
+			mission_completed = ydt_abolish_the_knightly_orders
+			NOT = {
+				has_country_flag = ydt_established_prussian_province
+			}
+			NOT = {
+				exists = YPP
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = west_prussia_area
+				area = east_prussia_area
+			}
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			west_prussia_area = {
+				type = all
+				owned_by = ROOT
+			}
+			east_prussia_area = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			custom_tooltip = ydt_establish_prussian_province_tt
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						OR = {
+							area = west_prussia_area
+							area = east_prussia_area
+						}
+					}
+					add_core = YPP
+				}
+				release = YPP 
+				every_owned_province = {
+					limit = {
+						OR = {
+							area = west_prussia_area
+							area = east_prussia_area
+						}
+					}
+					cede_province = YPP
+				}
+				create_subject = {
+					subject_type = ydt_scarlet_province
+					subject = YPP
+				}
+				YPP = {
+					change_government = monarchy
+					add_government_reform = ydt_scarlet_province_reform
+					change_religion = ROOT
+					set_capital = 43
+					change_country_color = {
+						color = { 145 35 65 }
+					}
+					every_owned_province = {
+						add_core = YPP
+					}
+				}
+				set_country_flag = ydt_established_prussian_province
+			}
+		}
+	}
+	
+	ydt_establish_greek_province = {
+		major = yes
+		potential = {
+			tag = WAL
+			has_country_flag = ydt_unlocked_scarlet_provinces
+			mission_completed = ydt_march_into_greece
+			NOT = {
+				has_country_flag = ydt_established_greek_province
+			}
+			NOT = {
+				exists = YGP
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = thrace_area
+				area = macedonia_area
+				area = morea_area
+				area = northern_greece_area
+				area = albania_area
+			}
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			thrace_area = {
+				type = all
+				owned_by = ROOT
+			}
+			macedonia_area = {
+				type = all
+				owned_by = ROOT
+			}
+			morea_area = {
+				type = all
+				owned_by = ROOT
+			}
+			northern_greece_area = {
+				type = all
+				owned_by = ROOT
+			}
+			albania_area = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			custom_tooltip = ydt_establish_greek_province_tt
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						OR = {
+							area = thrace_area
+							area = macedonia_area
+							area = morea_area
+							area = northern_greece_area
+							area = albania_area
+						}
+					}
+					add_core = YGP
+				}
+				release = YGP
+				every_owned_province = {
+					limit = {
+						OR = {
+							area = thrace_area
+							area = macedonia_area
+							area = morea_area
+							area = northern_greece_area
+							area = albania_area
+						}
+					}
+					cede_province = YGP
+				}
+				create_subject = {
+					subject_type = ydt_scarlet_province
+					subject = YGP
+				}
+				YGP = {
+					change_government = monarchy
+					add_government_reform = ydt_scarlet_province_reform
+					change_religion = ROOT
+					set_capital = 146
+					change_country_color = {
+						color = { 145 35 65 }
+					}
+					every_owned_province = {
+						add_core = YGP
+					}
+				}
+				set_country_flag = ydt_established_greek_province
+			}
+		}
+	}
+	
+	ydt_establish_russian_province = {
+		major = yes
+		potential = {
+			tag = WAL
+			has_country_flag = ydt_unlocked_scarlet_provinces
+			mission_completed = ydt_crush_the_third_rome
+			NOT = {
+				has_country_flag = ydt_established_russian_province
+			}
+			NOT = {
+				exists = YRP
+			}
+		}
+		provinces_to_highlight = {
+			region = russia_region
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			russia_region = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			custom_tooltip = ydt_establish_russian_province_tt
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						region = russia_region
+					}
+					add_core = YRP
+				}
+				release = YRP
+				every_owned_province = {
+					limit = {
+						region = russia_region
+					}
+					cede_province = YRP
+				}
+				create_subject = {
+					subject_type = ydt_scarlet_province
+					subject = YRP
+				}
+				YRP = {
+					change_government = monarchy
+					add_government_reform = ydt_scarlet_province_reform
+					change_religion = ROOT
+					set_capital = 295
+					change_country_color = {
+						color = { 145 35 65 }
+					}
+					every_owned_province = {
+						add_core = YRP
+					}
+				}
+				set_country_flag = ydt_established_russian_province
+			}
+		}
+	}	
+}

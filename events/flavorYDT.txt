@@ -1,0 +1,119 @@
+namespace = ydt_mansion
+
+country_event = {
+    id = ydt_mansion.1
+    title = ydt_mansion.1.t
+    desc = ydt_mansion.1.d
+    picture = VILLAGE_BURNING_eventPicture
+    trigger = {
+        mission_completed = ydt_build_the_mansion
+        4531 = {
+            owned_by = ROOT
+            development = 15
+        }
+        OR = {
+            NOT = {
+                has_country_flag = ydt_mansion_explosion_cooldown
+            }
+            had_country_flag = {
+                flag = ydt_mansion_explosion_cooldown
+                days = 1825
+            }
+        }
+    }
+    mean_time_to_happen = {
+		months = 60
+		modifier = {
+			factor = 0.5
+			has_country_flag = ydt_found_flandre
+			NOT = {
+            has_country_flag = ydt_flandre_confined
+			}
+		}
+	}
+    immediate = {
+        clr_country_flag = ydt_mansion_explosion_cooldown
+        set_country_flag = ydt_mansion_explosion_cooldown
+    }
+    option = {
+        name = ydt_mansion.1.a
+        4531 = {
+            add_base_tax = -2
+            add_base_production = -2
+            add_base_manpower = -2
+            add_devastation = 10
+        }
+		if = {
+			limit = {
+				has_government_mechanic = ydt_scarlet_mechanic
+			}
+			add_government_power = {
+				mechanic_type = ydt_scarlet_mechanic
+				power_type = ydt_scarlet_value
+				value = -10
+			}
+		}
+    }
+}
+
+
+namespace = ydt_lunar_war
+
+country_event = {
+    id = ydt_lunar_war.1
+    title = ydt_lunar_war.1.t
+    desc = ydt_lunar_war.1.d
+    picture = BATTLE_eventPicture
+    is_triggered_only = yes
+    immediate = {
+        clr_country_flag = ydt_lunar_war_started
+        set_country_flag = ydt_lunar_war_started
+    }
+    option = {
+        name = ydt_lunar_war.1.a
+    }
+}
+
+country_event = {
+    id = ydt_lunar_war.2
+    title = ydt_lunar_war.2.t
+    desc = ydt_lunar_war.2.d
+    picture = BATTLE_eventPicture
+    is_triggered_only = yes
+    immediate = {
+        set_country_flag = ydt_lunar_war_completed
+        clr_country_flag = ydt_lunar_war_started
+    }
+    option = {
+        name = ydt_lunar_war.2.a
+    }
+}
+
+namespace = ydt_eastern_rome
+
+country_event = {
+    id = ydt_eastern_rome.1
+    title = ydt_eastern_rome.1.t
+    desc = ydt_eastern_rome.1.d
+    picture = CITY_VIEW_eventPicture
+    is_triggered_only = yes
+    option = {
+        name = ydt_eastern_rome.1.a
+        add_prestige = 25
+    }
+}
+
+namespace = ydt_pax
+
+country_event = {
+    id = ydt_pax.1
+    title = ydt_pax.1.t
+    desc = ydt_pax.1.d
+    picture = YDT_PAX_REMILIANA_eventPicture
+    is_triggered_only = yes
+    fire_only_once = yes
+    option = {
+        name = ydt_pax.1.a
+		custom_tooltip = ydt_pax.1.a.tt
+    }
+}

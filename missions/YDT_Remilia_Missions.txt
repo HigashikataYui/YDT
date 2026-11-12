@@ -1,0 +1,1024 @@
+ydt_remilia_missions_3 = {
+    slot = 3
+    generic = no
+    ai = yes
+    potential = {
+        tag = WAL
+        has_country_flag = ydt_remilia
+    }
+	has_country_shield = yes
+
+    ydt_consolidate_rule = {
+        icon = mission_consolidate_the_state
+        position = 1
+        required_missions = { }
+        trigger = {
+            legitimacy = 50
+        }
+        effect = {
+            add_stability = 1
+			set_country_flag = ydt_remilia_ideas
+			swap_free_idea_group = yes
+			add_government_reform = ydt_scarlet_autocracy
+			set_country_flag = ydt_granting_estate_opposition
+			set_estate_privilege = ydt_clergy_opposition
+			set_estate_privilege = ydt_nobles_opposition
+			set_estate_privilege = ydt_burghers_opposition
+			clr_country_flag = ydt_granting_estate_opposition
+        }
+    }
+}
+
+
+ydt_remilia_missions_5 = {
+    slot = 5
+    generic = no
+    ai = yes
+    potential = {
+        tag = WAL
+        has_country_flag = ydt_remilia
+    }
+	has_country_shield = yes
+
+	ydt_restore_finances = {
+		icon = mission_war_chest
+		position = 2
+		required_missions = { ydt_consolidate_rule }
+		trigger = {
+			NOT = { has_estate_privilege = ydt_burghers_opposition }
+			estate_loyalty = {
+				estate = estate_burghers
+				loyalty = 50
+			}
+		}
+		effect = {
+			add_years_of_income = 5
+			add_country_modifier = {
+				name = ydt_restored_tax_revenue
+				duration = 7300
+			}
+		}
+    }
+	
+	ydt_danube_trade_route = {
+		icon = mission_high_income
+		position = 3
+		required_missions = { ydt_restore_finances }
+		trigger = {
+			153 = {
+				trade_share = {
+					country = ROOT
+					share = 20
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = ydt_danube_merchants
+				duration = -1
+			}
+		}
+	}
+	
+	ydt_turn_stone_into_gold = {
+		icon = mission_zambezi_gold
+		position = 4
+		required_missions = { ydt_danube_trade_route }
+		provinces_to_highlight = {
+			province_id = 160
+		}
+		trigger = {
+			160 = {
+				owned_by = ROOT
+				base_production = 5
+			}
+		}
+		effect = {
+			160 = {
+				change_trade_goods = gold
+			}
+		}
+	}
+	
+	ydt_develop_gold_mine = {
+		icon = dominant_economy
+		position = 5
+		required_missions = { ydt_turn_stone_into_gold }
+		provinces_to_highlight = {
+			province_id = 160
+		}
+		trigger = {
+			160 = {
+				owned_by = ROOT
+				development = 15
+				num_of_buildings_in_province = 2
+			}
+		}
+		effect = {
+			160 = {
+				add_base_production = 3
+			}
+			add_country_modifier = {
+				name = ydt_gold_mining_regulations
+				duration = -1
+			}
+		}
+	}
+	
+	ydt_build_wallachia = {
+		icon = austria_prospers
+		position = 6
+		required_missions = { ydt_develop_gold_mine }
+		provinces_to_highlight = {
+			area = wallachia_area
+		}
+		trigger = {
+			development_in_provinces = {
+				value = 100
+				area = wallachia_area
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = ydt_wallachian_construction
+				duration = -1
+			}
+		}
+	}
+}
+
+ydt_missions_2_issued_edict_of_giurgiu = {
+    slot = 2
+    generic = no
+    ai = yes
+    potential = {
+        tag = WAL
+        has_country_flag = ydt_remilia
+        has_country_flag = ydt_issued_edict_of_giurgiu
+    }
+    has_country_shield = yes
+
+    ydt_return_to_animism = {
+        icon = mission_religious
+        position = 2
+        required_missions = { ydt_consolidate_rule }
+        trigger = {
+            NOT = {
+                has_estate_privilege = ydt_clergy_opposition
+            }
+            estate_loyalty = {
+                estate = estate_church
+                loyalty = 50
+            }
+        }
+        effect = {
+            add_stability = -1
+            change_religion = animism
+            add_estate_loyalty = {
+                estate = estate_church
+                loyalty = -20
+            }
+			unlock_government_reform = {
+					government_reform = ydt_gensokyo_animism
+			}
+        }
+    }
+	
+	ydt_build_the_mansion = {
+		icon = mission_early_game_buildings
+		position = 3
+		required_missions = { }
+		provinces_to_highlight = {
+			province_id = 4531
+		}
+		trigger = {
+			4531 = {
+				owned_by = ROOT
+				development = 20
+				num_of_buildings_in_province = 3
+			}
+		}
+		effect = {
+			4531 = {
+				add_province_modifier = {
+					name = ydt_scarlet_mansion_construction
+					duration = -1
+				}
+			}
+		}
+	}
+	
+	ydt_old_companions = {
+		icon = mission_alliances
+		position = 4
+		required_missions = { ydt_build_the_mansion }
+		trigger = {
+			has_government_power = {
+				mechanic_type = ydt_scarlet_mechanic
+				power_type = ydt_scarlet_value
+				value = 25
+			}
+			legitimacy = 90
+		}
+		effect = {
+			custom_tooltip = ydt_old_companions_unlock_tt
+		}
+	}
+	
+	ydt_lessons_of_lunar_war = {
+		icon = army_reforms
+		position = 5
+		required_missions = { ydt_old_companions }
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = ydt_lunar_war_completed_tt
+				has_country_flag = ydt_lunar_war_completed
+			}
+		}
+		effect = {
+			unlock_government_reform = {
+				government_reform = ydt_lunar_war_lessons_reform
+			}
+			if = {
+				limit = {
+					has_ruler = "Remilia Scarlet"
+				}
+				remove_ruler_personality = naive_personality
+				add_ruler_personality = free_thinker_personality
+			}
+		}
+	}
+	
+	ydt_defeat_hungary = {
+		icon = mission_landsknecht_soldier
+		position = 6
+		required_missions = {
+			ydt_reclaim_romania
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = transylvania_area
+				area = southern_transylvania_area
+			}
+			NOT = {
+				owned_by = ROOT
+				is_core = ROOT
+				controlled_by = ROOT
+			}
+		}
+		trigger = {
+			transylvania_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+				controlled_by = ROOT
+			}
+			southern_transylvania_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+				controlled_by = ROOT
+			}
+		}
+		effect = {
+			transdanubia_area = {
+				add_permanent_claim = ROOT
+			}
+			alfold_area = {
+				add_permanent_claim = ROOT
+			}
+			slovakia_area = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	
+	ydt_march_into_the_balkans = {
+		icon = mission_landsknecht_soldier
+		position = 7
+		required_missions = {
+			ydt_defeat_hungary
+			ydt_journey_to_eastern_rome
+		}
+		provinces_to_highlight = {
+			region = carpathia_region
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			carpathia_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			custom_tooltip = ydt_march_into_the_balkans_reward_tt
+			custom_tooltip = ydt_unlock_balkan_province_decision_tt
+			every_country = {
+				limit = {
+					NOT = { tag = ROOT }
+					any_owned_province = {
+						OR = {
+							area = slavonia_area
+							area = croatia_area
+							area = east_adriatic_coast_area
+							area = bosnia_area
+							area = serbia_area
+							area = rascia_area
+						}
+					}
+				}
+				set_country_flag = ydt_scarlet_invasion_target_@ROOT
+			}
+		}
+	}
+}
+
+ydt_missions_3_issued_edict_of_giurgiu = {
+    slot = 3
+    generic = no
+    ai = yes
+    potential = {
+        tag = WAL
+        has_country_flag = ydt_remilia
+        has_country_flag = ydt_issued_edict_of_giurgiu
+    }
+    has_country_shield = yes
+
+    ydt_dissolve_order_of_the_dragon = {
+        icon = mission_teutonic_knights
+        position = 2
+        required_missions = { ydt_consolidate_rule }
+        trigger = {
+            religion = animism
+            NOT = {
+                has_estate_privilege = ydt_nobles_opposition
+            }
+            estate_loyalty = {
+                estate = estate_nobles
+                loyalty = 50
+            }
+            owns = 4531
+        }
+        effect = {
+            if = {
+                limit = { exists = TUR }
+                TUR = {
+                    add_opinion = {
+                        who = ROOT
+                        modifier = ydt_dissolved_dragon_order_positive
+                    }
+                }
+            }
+            if = {
+                limit = { exists = HUN }
+                HUN = {
+                    add_opinion = {
+                        who = ROOT
+                        modifier = ydt_dissolved_dragon_order_negative
+                    }
+                }
+            }
+            if = {
+                limit = { exists = MOL }
+                MOL = {
+                    add_opinion = {
+                        who = ROOT
+                        modifier = ydt_dissolved_dragon_order_negative
+                    }
+                }
+            }
+            add_estate_loyalty = {
+                estate = estate_nobles
+                loyalty = -20
+            }
+            set_capital = 4531
+            4531 = {
+                change_province_name = "¢uT›†™"
+                rename_capital = "¢uT›†™"
+                add_base_tax = 3
+                add_base_production = 3
+                add_base_manpower = 3
+            }
+            change_country_color = {
+                color = { 180 25 55 }
+            }
+        }
+    }
+	
+	ydt_master_the_estates = {
+		icon = balance_the_estates
+		position = 3
+		required_missions = {
+			ydt_return_to_animism
+			ydt_dissolve_order_of_the_dragon
+			ydt_restore_finances
+		}
+
+		trigger = {
+			if = {
+				limit = { has_estate = estate_church }
+				estate_loyalty = {
+					estate = estate_church
+					loyalty = 50
+				}
+			}
+			if = {
+				limit = { has_estate = estate_nobles }
+				estate_loyalty = {
+					estate = estate_nobles
+					loyalty = 50
+				}
+			}
+			if = {
+				limit = { has_estate = estate_burghers }
+				estate_loyalty = {
+					estate = estate_burghers
+					loyalty = 50
+				}
+			}
+		}
+		effect = {
+			change_estate_land_share = {
+				estate = all
+				share = -30
+			}
+			add_country_modifier = {
+				name = ydt_estates_under_control
+				duration = -1
+			}
+			disable_rebels_from_seize_land_for_estate = {
+				estate = all
+			}
+		}
+	}
+	
+	ydt_surrounded_by_enemies = {
+		icon = mission_assemble_an_army
+		position = 4
+		required_missions = { ydt_master_the_estates }
+		trigger = {
+			army_size_percentage = 1
+		}
+		effect = {
+			add_country_modifier = {
+				name = ydt_prepared_for_strong_enemies
+				duration = 7300
+			}
+		}
+	}
+	
+	ydt_reclaim_romania = {
+		icon = mission_conquer_romania
+		position = 5
+		required_missions = {
+			ydt_surrounded_by_enemies
+		}
+		trigger = {
+			if = {
+				limit = {
+					exists = HUN
+				}
+				army_strength = {
+					who = HUN
+					value = 0.5
+				}
+			}
+			else = {
+				army_size = 10
+			}
+		}
+		effect = {
+			southern_transylvania_area = {
+				add_permanent_claim = ROOT
+			}
+			transylvania_area = {
+				add_permanent_claim = ROOT
+			}
+			moldavia_area = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	
+	ydt_journey_to_eastern_rome = {
+		icon = mission_constantinople
+		position = 6
+		required_missions = {
+			ydt_reclaim_romania
+		}
+		provinces_to_highlight = {
+			province_id = 151
+		}
+		trigger = {
+			if = {
+				limit = {
+					exists = BYZ
+				}
+				BYZ = {
+					has_opinion = {
+						who = ROOT
+						value = 100
+					}
+				}
+			}
+			else = {
+				151 = {
+					controlled_by = ROOT
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = ydt_unlock_scarlet_provinces_tt
+			hidden_effect = {
+				set_country_flag = ydt_unlocked_scarlet_provinces
+			}
+			country_event = {
+				id = ydt_eastern_rome.1
+			}
+		}
+	}
+	
+	ydt_dominate_eastern_europe = {
+		icon = mission_king_of_eastern_europe
+		position = 8
+		required_missions = {
+			ydt_abolish_the_knightly_orders
+			ydt_march_into_the_balkans
+			ydt_march_into_greece
+		}
+		trigger = {
+			total_development = 500
+			army_size = 50
+			is_great_power = yes
+		}
+		effect = {
+			add_prestige = 20
+			add_country_modifier = {
+				name = ydt_master_of_eastern_europe
+				duration = -1
+			}
+		}
+	}
+	
+	ydt_crush_the_third_rome = {
+		icon = mission_fall_of_third_rome
+		position = 9
+		required_missions = {
+			ydt_dominate_eastern_europe
+		}
+		provinces_to_highlight = {
+			OR = {
+				region = ruthenia_region
+				region = crimea_region
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					exists = RUS
+				}
+				army_strength = {
+					who = RUS
+					value = 1.5
+				}
+				num_of_cavalry = RUS
+			}
+			else_if = {
+				limit = {
+					exists = MOS
+				}
+				army_strength = {
+					who = MOS
+					value = 1.5
+				}
+				num_of_cavalry = MOS
+			}
+			else = {
+				num_of_cavalry = 20
+			}
+			ruthenia_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			crimea_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_government_power = {
+				mechanic_type = ydt_scarlet_mechanic
+				power_type = ydt_scarlet_value
+				value = 50
+			}
+			custom_tooltip = ydt_crush_the_third_rome_cb_tt
+			custom_tooltip = ydt_unlock_russian_province_decision_tt
+			hidden_effect = {
+				every_country = {
+					limit = {
+						NOT = { tag = ROOT }
+						NOT = {
+							is_subject_of_type = ydt_scarlet_province
+						}
+						any_owned_province = {
+							region = russia_region
+						}
+					}
+					set_country_flag = ydt_scarlet_invasion_target_@ROOT
+				}
+			}
+		}
+	}
+	
+	ydt_pax_remiliana = {
+		icon = mission_ydt_pax_remiliana
+		position = 10
+		required_missions = {
+			ydt_crush_the_third_rome
+		}
+		provinces_to_highlight = {
+			OR = {
+				region = carpathia_region
+				AND = {
+					region = poland_region
+					NOT = { area = silesia_area }
+				}
+				region = baltic_region
+				region = balkan_region
+				region = ruthenia_region
+				region = crimea_region
+				region = russia_region
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = ydt_pax_remiliana_land_tt
+				NOT = {
+					any_province = {
+						OR = {
+							region = carpathia_region
+							AND = {
+								region = poland_region
+								NOT = { area = silesia_area }
+							}
+							region = baltic_region
+							region = balkan_region
+							region = ruthenia_region
+							region = crimea_region
+							region = russia_region
+						}
+						NOT = {
+							country_or_non_sovereign_subject_holds = ROOT
+						}
+					}
+				}
+			}
+			NOT = {
+				any_province = {
+					region = balkan_region
+					owned_by = TUR
+				}
+			}
+			NOT = { exists = RUS }
+			NOT = { exists = MOS }
+			is_great_power = yes
+			NOT = {
+				great_power_rank = 2
+			}
+			total_own_and_non_tributary_subject_development = 1000
+			stability = 3
+		}
+		effect = {
+			add_country_modifier = {
+				name = ydt_pax_remiliana_modifier
+				duration = -1
+			}
+			add_power_projection = {
+				type = mission_rewards_power_projection
+				amount = 50
+			}
+			if = {
+				limit = {
+					has_ruler = "Remilia Scarlet"
+				}
+				change_adm = 1
+			}
+			country_event = {
+				id = ydt_pax.1
+				days = 1
+			}
+		}
+	}
+}
+
+ydt_missions_1_issued_edict_of_giurgiu = {
+    slot = 1
+    generic = no
+    ai = yes
+    potential = {
+        tag = WAL
+        has_country_flag = ydt_remilia
+        has_country_flag = ydt_issued_edict_of_giurgiu
+    }
+	has_country_shield = yes
+
+    ydt_polish_crown = {
+        icon = mission_the_polish_throne
+        position = 6
+        required_missions = {
+            ydt_reclaim_romania
+        }
+        provinces_to_highlight = {
+            area = moldavia_area
+            NOT = {
+                AND = {
+                    owned_by = ROOT
+                    is_core = ROOT
+                    controlled_by = ROOT
+                }
+            }
+        }
+        trigger = {
+            moldavia_area = {
+                type = all
+                owned_by = ROOT
+                is_core = ROOT
+                controlled_by = ROOT
+            }
+            if = {
+                limit = {
+                    exists = POL
+                }
+                army_strength = {
+                    who = POL
+                    value = 0.75
+                }
+            }
+        }
+        effect = {
+            if = {
+                limit = {
+                    exists = POL
+                    valid_for_personal_unions_trigger = yes
+                    POL = {
+                        valid_for_personal_unions_trigger = yes
+                    }
+                }
+                add_casus_belli = {
+                    type = cb_claim_throne
+                    target = POL
+                    months = 240
+                }
+            }
+            else = {
+                poland_region = {
+                    limit = {
+                        NOT = {
+                            area = silesia_area
+                        }
+                    }
+                    add_permanent_claim = ROOT
+                }
+            }
+        }
+    }
+	
+	ydt_integrate_the_steppes = {
+		icon = mission_lit_harness_steppes
+		position = 7
+		required_missions = {
+			ydt_polish_crown
+		}
+		provinces_to_highlight = {
+			region = poland_region
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				region = poland_region
+				value = 20
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					exists = POL
+				}
+				add_historical_friend = POL
+				POL = {
+					add_historical_friend = ROOT
+				}
+			}
+			add_country_modifier = {
+				name = ydt_integrated_the_steppes
+				duration = -1
+			}
+			baltic_region = {
+				limit = {
+					NOT = {
+						area = east_prussia_area
+					}
+					NOT = {
+						area = west_prussia_area
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			crimea_region = {
+				add_permanent_claim = ROOT
+			}
+			if = {
+				limit = {
+					exists = LIT
+					LIT = {
+						is_subject_of = ROOT
+					}
+				}
+				add_historical_friend = LIT
+				LIT = {
+					add_historical_friend = ROOT
+				}
+			}
+			else_if = {
+				limit = {
+					exists = LIT
+					LIT = {
+						valid_for_personal_unions_trigger = yes
+					}
+				}
+				add_casus_belli = {
+					type = cb_claim_throne
+					target = LIT
+					months = 240
+				}
+			}
+			else = {
+				ruthenia_region = {
+					add_permanent_claim = ROOT
+				}
+			}
+		}
+	}
+	
+	ydt_abolish_the_knightly_orders = {
+		icon = mission_livonian_knights
+		position = 8
+		required_missions = {
+			ydt_integrate_the_steppes
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = curonia_area
+				area = livonia_area
+				area = estonia_ingria_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			curonia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			livonia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			estonia_ingria_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			NOT = {
+				exists = LIV
+			}
+		}
+		effect = {
+			east_prussia_area = {
+				add_permanent_claim = ROOT
+			}
+			west_prussia_area = {
+				add_permanent_claim = ROOT
+			}
+			custom_tooltip = ydt_permanent_invasion_against_teutons_tt
+			custom_tooltip = ydt_unlock_prussian_province_decision_tt
+			hidden_effect = {
+				TEU = {
+					set_country_flag = ydt_scarlet_invasion_target_@ROOT
+				}
+			}
+		}
+	}
+}
+
+ydt_missions_4_issued_edict_of_giurgiu = {
+    slot = 4
+    generic = no
+    ai = yes
+    potential = {
+        tag = WAL
+        has_country_flag = ydt_remilia
+        has_country_flag = ydt_issued_edict_of_giurgiu
+    }
+    has_country_shield = yes
+
+    ydt_march_into_bulgaria = {
+        icon = push_on_to_bulgaria
+        position = 6
+        required_missions = {
+            ydt_reclaim_romania
+        }
+        provinces_to_highlight = {
+            area = moldavia_area
+            NOT = {
+                AND = {
+                    owned_by = ROOT
+                    is_core = ROOT
+                    controlled_by = ROOT
+                }
+            }
+        }
+        trigger = {
+            moldavia_area = {
+                type = all
+                owned_by = ROOT
+                is_core = ROOT
+                controlled_by = ROOT
+            }
+        }
+        effect = {
+            bulgaria_area = {
+                add_permanent_claim = ROOT
+            }
+            silistria_area = {
+                add_permanent_claim = ROOT
+            }
+        }
+    }
+	
+	ydt_march_into_greece = {
+		icon = foothold_in_greece
+		position = 7
+		required_missions = {
+			ydt_march_into_bulgaria
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = bulgaria_area
+				area = silistria_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			bulgaria_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			silistria_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_government_power = {
+				mechanic_type = ydt_scarlet_mechanic
+				power_type = ydt_scarlet_value
+				value = 25
+			}
+			custom_tooltip = ydt_march_into_greece_cb_tt
+			custom_tooltip = ydt_unlock_greek_province_decision_tt
+			hidden_effect = {
+				every_country = {
+					limit = {
+						NOT = { tag = ROOT }
+						NOT = {
+							is_subject_of_type = ydt_scarlet_province
+						}
+						any_owned_province = {
+							OR = {
+								area = thrace_area
+								area = macedonia_area
+								area = morea_area
+								area = northern_greece_area
+								area = albania_area
+							}
+						}
+					}
+					set_country_flag = ydt_scarlet_invasion_target_@ROOT
+				}
+			}
+		}
+	}
+}

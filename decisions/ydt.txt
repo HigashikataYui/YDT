@@ -1,0 +1,366 @@
+country_decisions = {
+
+    ydt_concede_to_the_bishop = {
+		major = yes
+        potential = {
+            has_estate_privilege = ydt_clergy_opposition
+        }
+        allow = {
+            stability = 2
+        }
+        effect = {
+            remove_estate_privilege = ydt_clergy_opposition
+            add_estate_loyalty = {
+                estate = estate_church
+                loyalty = 20
+            }
+            hidden_effect = {
+                set_country_flag = ydt_conceded_to_the_bishop
+            }
+			custom_tooltip = ydt_concede_to_the_bishop_route_tt
+        }
+    }
+
+    ydt_edict_of_giurgiu = {
+		major = yes
+        potential = {
+            has_estate_privilege = ydt_clergy_opposition
+        }
+        allow = {
+            adm_power = 100
+            mil_power = 100
+        }
+        effect = {
+            add_adm_power = -100
+            add_mil_power = -100
+            remove_estate_privilege = ydt_clergy_opposition
+            hidden_effect = {
+                set_country_flag = ydt_issued_edict_of_giurgiu
+				swap_non_generic_missions = yes
+            }
+			custom_tooltip = ydt_edict_of_giurgiu_route_tt
+        }
+    }
+
+    ydt_appease_the_boyars = {
+		major = yes
+        potential = {
+            has_estate_privilege = ydt_nobles_opposition
+        }
+        allow = {
+            legitimacy = 80
+            manpower_percentage = 0.80
+        }
+        effect = {
+            add_prestige = -10
+            remove_estate_privilege = ydt_nobles_opposition
+            add_estate_loyalty = {
+                estate = estate_nobles
+                loyalty = 20
+            }
+        }
+
+    }
+
+    ydt_compensate_the_merchants = {
+		major = yes
+        potential = {
+            has_estate_privilege = ydt_burghers_opposition
+        }
+        allow = {
+            treasury = 100
+            NOT = { num_of_loans = 1 }
+        }
+        effect = {
+            add_treasury = -100
+            remove_estate_privilege = ydt_burghers_opposition
+            add_estate_loyalty = {
+                estate = estate_burghers
+                loyalty = 20
+            }
+        }
+    }
+	
+	ydt_romanian_nation = {
+		major = yes
+		potential = {
+			tag = WAL
+			has_country_flag = ydt_remilia
+			primary_culture = romanian
+			NOT = { has_country_flag = formed_romania_flag }
+		}
+		
+		provinces_to_highlight = {
+			OR = {
+				province_id = 158	# Transylvania
+				province_id = 160	# Oltenia
+				province_id = 161	# Wallachia
+				province_id = 268	# Bessarabia
+				province_id = 1756	# Budjak
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			is_at_war = no
+			owns_core_province = 158	# Transylvania
+			owns_core_province = 160	# Oltenia
+			owns_core_province = 161	# Wallachia
+			owns_core_province = 268	# Bessarabia
+			owns_core_province = 1756	# Budjak
+		}
+		effect = {
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = {
+					NOT = {
+						government_rank = 2
+					}
+				}
+				set_government_rank = 2
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			set_country_flag = formed_romania_flag
+			override_country_name = RMN
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	
+	ydt_find_meiling = {
+        major = yes
+        potential = {
+            mission_completed = ydt_old_companions
+            NOT = { has_country_flag = ydt_found_meiling }
+        }
+        allow = {
+            has_government_power = {
+                mechanic_type = ydt_scarlet_mechanic
+                power_type = ydt_scarlet_value
+                value = 25
+            }
+        }
+        effect = {
+            add_government_power = {
+                mechanic_type = ydt_scarlet_mechanic
+                power_type = ydt_scarlet_value
+                value = -25
+            }
+            add_country_modifier = {
+                name = ydt_meiling_companion
+                duration = -1
+            }
+            hidden_effect = {
+                set_country_flag = ydt_found_meiling
+            }
+        }
+    }
+
+    ydt_find_patchouli = {
+        major = yes
+        potential = {
+            mission_completed = ydt_old_companions
+            NOT = { has_country_flag = ydt_found_patchouli }
+        }
+        allow = {
+            owns = 4531
+
+            has_government_power = {
+                mechanic_type = ydt_scarlet_mechanic
+                power_type = ydt_scarlet_value
+                value = 50
+            }
+        }
+        effect = {
+            add_government_power = {
+                mechanic_type = ydt_scarlet_mechanic
+                power_type = ydt_scarlet_value
+                value = -50
+            }
+            add_country_modifier = {
+                name = ydt_patchouli_companion
+                duration = -1
+            }
+            4531 = {
+                if = {
+                    limit = {
+                        NOT = { has_building = university }
+                    }
+                    add_building = university
+                }
+            }
+            hidden_effect = {
+                set_country_flag = ydt_found_patchouli
+            }
+        }
+    }
+
+    ydt_find_sakuya = {
+        major = yes
+        potential = {
+            mission_completed = ydt_old_companions
+            NOT = { has_country_flag = ydt_found_sakuya }
+        }
+        allow = {
+			has_government_power = {
+			mechanic_type = ydt_scarlet_mechanic
+			power_type = ydt_scarlet_value
+			value = 75
+			}
+		}
+        effect = {
+			add_government_power = {
+			mechanic_type = ydt_scarlet_mechanic
+			power_type = ydt_scarlet_value
+			value = -75
+			}
+            add_country_modifier = {
+                name = ydt_sakuya_companion
+                duration = -1
+            }
+            hidden_effect = {
+                set_country_flag = ydt_found_sakuya
+            }
+        }
+    }
+
+    ydt_find_flandre = {
+        major = yes
+        potential = {
+            mission_completed = ydt_old_companions
+            NOT = { has_country_flag = ydt_found_flandre }
+        }
+        allow = {
+            has_government_power = {
+                mechanic_type = ydt_scarlet_mechanic
+                power_type = ydt_scarlet_value
+                value = 100
+            }
+        }
+        effect = {
+            add_government_power = {
+                mechanic_type = ydt_scarlet_mechanic
+                power_type = ydt_scarlet_value
+                value = -100
+            }
+            add_stability = -2
+            add_country_modifier = {
+                name = ydt_flandre_companion
+                duration = -1
+            }
+            custom_tooltip = ydt_flandre_global_ae_tt
+            hidden_effect = {
+                every_country = {
+                    limit = {
+                        NOT = { tag = ROOT }
+                    }
+                    add_aggressive_expansion = {
+                        who = ROOT
+                        value = 20
+                        apply_calc = no
+                    }
+                }
+                set_country_flag = ydt_found_flandre
+            }
+            custom_tooltip = ydt_flandre_explosion_tt
+        }
+    }
+	
+	ydt_control_flandre = {
+		major = yes
+		potential = {
+			has_country_flag = ydt_found_flandre
+			NOT = { has_country_flag = ydt_flandre_confined }
+		}
+		allow = {
+			has_government_power = {
+				mechanic_type = ydt_scarlet_mechanic
+				power_type = ydt_scarlet_value
+				value = 25
+			}
+		}
+		effect = {
+			add_government_power = {
+				mechanic_type = ydt_scarlet_mechanic
+				power_type = ydt_scarlet_value
+				value = -25
+			}
+			remove_country_modifier = ydt_flandre_companion
+			hidden_effect = {
+				set_country_flag = ydt_flandre_confined
+			}
+			custom_tooltip = ydt_control_flandre_explosion_tt
+		}
+	}
+
+	ydt_release_flandre = {
+		major = yes
+		potential = {
+			has_country_flag = ydt_found_flandre
+			has_country_flag = ydt_flandre_confined
+		}
+		allow = {
+			stability = -2
+		}
+		effect = {
+			add_stability = -1
+			add_country_modifier = {
+				name = ydt_flandre_companion
+				duration = -1
+			}
+			hidden_effect = {
+				clr_country_flag = ydt_flandre_confined
+			}
+			custom_tooltip = ydt_release_flandre_explosion_tt
+		}
+	}
+
+	ydt_remilia_grow_up = {
+		major = yes
+		potential = {
+			has_country_flag = ydt_remilia
+			has_country_flag = ydt_found_sakuya
+			has_ruler = "Remilia Scarlet"
+			NOT = {
+				has_country_flag = ydt_remilia_matured
+			}
+		}
+		allow = {
+			legitimacy = 80
+			has_ruler = "Remilia Scarlet"
+			has_government_power = {
+				mechanic_type = ydt_scarlet_mechanic
+				power_type = ydt_scarlet_value
+				value = 50
+			}	
+		}
+		effect = {
+			add_government_power = {
+				mechanic_type = ydt_scarlet_mechanic
+				power_type = ydt_scarlet_value
+				value = -50
+			}
+			add_legitimacy = -20
+			change_dip = 1
+			remove_ruler_personality = cruel_personality
+			add_ruler_personality = careful_personality
+			add_country_modifier = {
+				name = ydt_remilia_matured_modifier
+				duration = -1
+			}
+			hidden_effect = {
+				set_country_flag = ydt_remilia_matured
+			}
+		}
+	}
+}

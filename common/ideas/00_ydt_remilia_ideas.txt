@@ -1,0 +1,37 @@
+ydt_remilia_ideas = {
+    start = {
+        can_bypass_forts = yes
+        ignore_coring_distance = yes
+    }
+    bonus = {
+		infantry_fire = 1	
+        artillery_fire = 1
+    }
+    trigger = {
+        tag = WAL
+        has_country_flag = ydt_remilia_ideas
+    }
+    free = yes
+	
+    ydt_human_village = {
+        land_maintenance_modifier = -0.10
+    }
+    ydt_siege_corps = {
+        siege_ability = 0.20
+    }
+    ydt_struggle_experience = {
+        army_tradition = 1
+    }
+    ydt_scarlet_land = {
+        own_territory_dice_roll_bonus = 1
+    }
+    ydt_flying = {
+        movement_speed = 0.50
+    }
+    ydt_fate_control = {
+        province_warscore_cost = -0.25
+    }
+    ydt_scarlet_europe = {
+        morale_damage = 0.10
+    }
+}

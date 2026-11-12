@@ -1,0 +1,11 @@
+bookmark =
+{
+	name = "YDT_NAME"
+	desc = "YDT_DESC"
+	date = 1444.11.11
+	
+	center = 112
+	default = yes
+	
+	country = WAL
+}

@@ -1,0 +1,12 @@
+cb_ydt_scarlet_invasion = {
+    is_triggered_only = no
+    prerequisites = {
+        FROM = {
+            NOT = {
+                is_subject_of_type = ydt_scarlet_province
+            }
+            has_country_flag = ydt_scarlet_invasion_target_@ROOT
+        }
+    }
+    war_goal = ydt_scarlet_invasion_wargoal
+}

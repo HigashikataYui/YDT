@@ -1,0 +1,96 @@
+ydt_scarlet_anathema_ae_effect = {
+    FROM = {
+        save_event_target_as = ydt_anathema_target
+    }
+    every_known_country = {
+        limit = {
+            NOT = { tag = ROOT }
+        }
+        save_event_target_as = ydt_anathema_observer
+        export_to_variable = {
+            variable_name = ydt_anathema_ae
+            value = trigger_value:total_development
+            who = event_target:ydt_anathema_target
+        }
+        divide_variable = {
+            which = ydt_anathema_ae
+            value = 20
+        }
+        export_to_variable = {
+            variable_name = ydt_anathema_distance_denominator
+            value = border_distance
+            who = event_target:ydt_anathema_target
+            with = event_target:ydt_anathema_observer
+        }
+        divide_variable = {
+            which = ydt_anathema_distance_denominator
+            value = 100
+        }
+        multiply_variable = {
+            which = ydt_anathema_distance_denominator
+            value = 0.75
+        }
+        change_variable = {
+            which = ydt_anathema_distance_denominator
+            value = 1
+        }
+        set_variable = {
+            which = ydt_anathema_distance_factor
+            value = 1
+        }
+        divide_variable = {
+            which = ydt_anathema_distance_factor
+            which = ydt_anathema_distance_denominator
+        }
+        multiply_variable = {
+            which = ydt_anathema_ae
+            which = ydt_anathema_distance_factor
+        }
+        while = {
+            limit = {
+                check_variable = {
+                    which = ydt_anathema_ae
+                    value = 1
+                }
+            }
+            subtract_variable = {
+                which = ydt_anathema_ae
+                value = 1
+            }
+            add_aggressive_expansion = {
+                who = ROOT
+                value = 1
+                apply_calc = no
+            }
+        }
+        while = {
+            limit = {
+                check_variable = {
+                    which = ydt_anathema_ae
+                    value = 0.01
+                }
+            }
+            subtract_variable = {
+                which = ydt_anathema_ae
+                value = 0.01
+            }
+            add_aggressive_expansion = {
+                who = ROOT
+                value = 0.01
+                apply_calc = no
+            }
+        }
+        set_variable = {
+            which = ydt_anathema_ae
+            value = 0
+        }
+        set_variable = {
+            which = ydt_anathema_distance_denominator
+            value = 0
+        }
+        set_variable = {
+            which = ydt_anathema_distance_factor
+            value = 0
+        }
+    }
+}

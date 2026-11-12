@@ -1,0 +1,86 @@
+ydt_scarlet_autocracy = {
+    icon = "ydt_scarlet_autocracy"
+    potential = {
+        tag = WAL
+        has_country_flag = ydt_remilia
+        has_country_flag = ydt_remilia_ideas
+    }
+	lock_level_when_selected = yes
+    fixed_rank = 2
+    heir = no
+    queen = no
+    royal_marriage = no
+    modifiers = {
+        diplomatic_reputation = -2
+        ae_impact = 0.10
+    }
+	government_abilities = {
+		ydt_scarlet_mechanic
+	}
+}
+
+ydt_gensokyo_animism = {
+    icon = "ydt_gensokyo_animism"
+    potential = {
+        tag = WAL
+        has_country_flag = ydt_remilia
+        has_country_flag = ydt_issued_edict_of_giurgiu
+        has_unlocked_government_reform = {
+            government_reform = ydt_gensokyo_animism
+        }
+    }
+	lock_level_when_selected = yes
+    trigger = {
+        religion = animism
+    }
+    modifiers = {
+        can_not_build_missionaries = yes
+        no_religion_penalty = yes
+        global_unrest = -2
+        tolerance_own = 2
+    }
+}
+
+ydt_lunar_war_lessons_reform = {
+    icon = "ydt_lunar_war_lessons"
+    potential = {
+        tag = WAL
+        has_country_flag = ydt_remilia
+        has_unlocked_government_reform = {
+            government_reform = ydt_lunar_war_lessons_reform
+        }
+    }
+    modifiers = {
+        military_tactics = 1
+        fire_damage_received = -0.20
+    }
+}
+
+ydt_gensokyo_chronicle_reform = {
+    icon = "ydt_gensokyo_chronicle"
+    potential = {
+        has_country_flag = ydt_remilia
+    }
+    modifiers = {
+        country_admin_power = 1
+        country_diplomatic_power = 1
+        country_military_power = 1
+    }
+}
+
+ydt_scarlet_province_reform = {
+    icon = "nobleman"
+    potential = {
+        is_subject_of_type = ydt_scarlet_province
+    }
+    allow_normal_conversion = no
+    lock_level_when_selected = yes
+    custom_attributes = {
+        locked_government_type = yes
+    }
+    modifiers = {
+		can_not_build_missionaries = yes
+        no_religion_penalty = yes
+        global_unrest = -2
+    }
+}

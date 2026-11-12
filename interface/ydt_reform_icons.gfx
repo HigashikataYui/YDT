@@ -1,0 +1,18 @@
+spriteTypes = {
+	spriteType = {
+        name = "government_reform_ydt_scarlet_autocracy"
+        texturefile = "gfx//interface//government_reform_icons//ydt_scarlet_autocracy.dds"
+	}
+    spriteType = {
+        name = "government_reform_ydt_gensokyo_animism"
+        texturefile = "gfx/interface/government_reform_icons/ydt_gensokyo_animism.dds"
+    }
+    spriteType = {
+        name = "government_reform_ydt_lunar_war_lessons"
+        texturefile = "gfx/interface/government_reform_icons/ydt_lunar_war_lessons.dds"
+    }
+	spriteType = {
+        name = "government_reform_ydt_gensokyo_chronicle"
+        texturefile = "gfx/interface/government_reform_icons/ydt_gensokyo_chronicle.dds"
+    }
+}

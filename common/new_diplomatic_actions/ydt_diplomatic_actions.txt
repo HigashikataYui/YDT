@@ -1,0 +1,52 @@
+ydt_scarlet_anathema = {
+    category = covert
+    require_acceptance = no
+    is_visible = {
+        has_reform = ydt_scarlet_autocracy
+        has_government_mechanic = ydt_scarlet_mechanic
+        NOT = { tag = FROM }
+    }
+    is_allowed = {
+        has_government_power = {
+            mechanic_type = ydt_scarlet_mechanic
+            power_type = ydt_scarlet_value
+            value = 25
+        }
+        has_spy_network_in = {
+            who = FROM
+            value = 50
+        }
+    }
+    on_accept = {
+        add_government_power = {
+            mechanic_type = ydt_scarlet_mechanic
+            power_type = ydt_scarlet_value
+            value = -25
+        }
+        add_spy_network_in = {
+            who = FROM
+            value = -50
+        }
+        FROM = {
+            add_stability = -5
+            add_country_modifier = {
+                name = ydt_scarlet_anathema_penalty
+                duration = 3650
+            }
+			add_opinion = {
+				who = ROOT
+				modifier = ydt_scarlet_anathema_resentment
+			}
+        }
+        custom_tooltip = ydt_scarlet_anathema_ae_tt
+        hidden_effect = {
+            ydt_scarlet_anathema_ae_effect = yes
+        }
+		custom_tooltip = ydt_permanent_scarlet_invasion_tt
+		hidden_effect = {
+			FROM = {
+				set_country_flag = ydt_scarlet_invasion_target_@ROOT
+			}
+		}
+    }
+}

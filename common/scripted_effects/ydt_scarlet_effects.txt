@@ -1,0 +1,28 @@
+ydt_gain_scarlet_from_battle = {
+    if = {
+        limit = {
+            has_government_mechanic = ydt_scarlet_mechanic
+        }
+        change_variable = {
+            which = ydt_scarlet_kill_remainder
+            which = land_units_killed
+        }
+        while = {
+            limit = {
+                check_variable = {
+                    which = ydt_scarlet_kill_remainder
+                    value = 1000
+                }
+            }
+            subtract_variable = {
+                which = ydt_scarlet_kill_remainder
+                value = 1000
+            }
+            add_government_power = {
+                mechanic_type = ydt_scarlet_mechanic
+                power_type = ydt_scarlet_value
+                value = 1
+            }
+        }
+    }
+}

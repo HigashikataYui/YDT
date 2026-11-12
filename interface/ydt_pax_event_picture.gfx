@@ -1,0 +1,7 @@
+spriteTypes = {
+    spriteType = {
+        name = "YDT_PAX_REMILIANA_eventPicture"
+        texturefile = "gfx/event_pictures/ydt_pax_remiliana.dds"
+        alwaystransparent = yes
+    }
+}

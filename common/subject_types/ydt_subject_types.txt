@@ -1,0 +1,23 @@
+ydt_scarlet_province = {
+    copy_from = vassal
+	base_liberty_desire = -50.0
+    count = vassal
+    is_potential_overlord = {
+        has_country_flag = ydt_unlocked_scarlet_provinces
+    }
+    joins_overlords_wars = no
+    joins_colonial_wars = no
+    must_accept_cta_from_overlord = no
+    can_be_co_belligerented = no
+    relative_power_class = 1
+    can_be_annexed = no
+    can_be_integrated = no
+    modifier_overlord = {
+        modifier = ydt_scarlet_province_overlord_bonus
+        trigger = {
+            overlord = {
+                has_government_mechanic = ydt_scarlet_mechanic
+            }
+        }
+    }
+}

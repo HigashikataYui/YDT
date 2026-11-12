@@ -1,0 +1,6 @@
+spriteTypes = {
+    spriteType = {
+        name = "mission_ydt_pax_remiliana"
+        texturefile = "gfx/interface/missions/ydt_pax_remiliana.dds"
+    }
+}

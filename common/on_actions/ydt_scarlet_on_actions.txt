@@ -1,0 +1,7 @@
+on_battle_won_country = {
+    ydt_gain_scarlet_from_battle = yes
+}
+
+on_battle_lost_country = {
+    ydt_gain_scarlet_from_battle = yes
+}
