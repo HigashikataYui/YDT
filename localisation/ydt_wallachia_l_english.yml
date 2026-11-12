@@ -28,7 +28,7 @@
  ydt_burghers_opposition:0 "^lÍSùR"
  ydt_burghers_opposition_desc:0 "^lLˆOµb6R°e?eCgùR8f„vr^„˜ÿÅbÃVÙ*N*gåw„vP``?eCg0T0WFUºNmNN?aM‘T˜RXT8håg&ŒQ0"
  YDT_NAME:0 "Ç‘iOÀN„vt^|^+gÔˆ"
- YDT_DESC:0 "ætS³ub%„vˆmo`.O0RyrSbôuÀNðlöeÿVÉb·VŒNNÍNPW(WætÉbàQšN„vsY‹sKNMON0YYt³lWS¸SÿÏ‚9N„v›Q–RR—VÜw0qS	æSNµOÿSYr)RºNck6eþbASWR›Q„v‹kè0Ir0R2N¹„vOweg0R«R÷^ÿsY‹sÈSå‹`7hTTê²NãNÿ\n\n<wNÿâlÅ–SìNgsQÃV„v/fsY‹s‚YUOTrYÙ2NSýVfN0óŽNÖN‰kTŒegçuMOÿ-^ô•vPS	gºNÐcwÖN„v?QPRVÉb·V·Ç‘iOÀN0Yt^åNTÿSVºNìNÞVÆVwÙ:WFU®‹ÿMbO°‹w±)Y	gN*NTWRegêæSN*NMOb—ÿŒ…s|‰ƒšN·¯eaSŒ…yr0"
+ YDT_DESC:0 "ætS³ub%„vˆmo`.O0RyrSbôuÀNðlöeÿVÉb·VŒNNÍNPW(WætÉbàQšN„v'YlQKNMON0YYt³lWS¸SÿÏ‚9N„v›Q–RR—VÜw0qS	æSNµOÿSYr)RºNck6eþbASWR›Q„v‹kè0Ir0R2N¹„vOweg0R«R÷^ÿ'YlQÈSå‹`7hTTê²NãNÿ\n\n<wNÿâlÅ–SìNgsQÃV„v/fsY‹s‚YUOTrYÙ2NSýVfN0óŽNÖN‰kTŒegçuMOÿ-^ô•vPS	gºNÐcwÖN„v?QPRVÉb·V·Ç‘iOÀN0Yt^åNTÿSVºNìNÞVÆVwÙ:WFU®‹ÿMbO°‹w±)Y	gN*NTWRegêæSN*NMOb—ÿŒ…s|‰ƒšN·¯eaSŒ…yr0"
  ydt_concede_to_the_bishop_title:0 "§GTINYe©‹ek§!"
  ydt_concede_to_the_bishop_desc:0 "INYeóÊNÍNN¯w(W<yÜb-N:NŒ…s|‰ƒšNkywyÿôv0RsY‹s?aaˆvOckYe0‚YÊNýV…Qn‹‰RšRÿsY‹sïSåNbú‹SÍ‘YeOŸS	g„v<yêNÿ÷‹INYe(WNN*NINåe²NãS±Rû‹ÙýNOSšR0"
  ydt_edict_of_giurgiu_title:0 "§RENSENUeäN§!"
@@ -225,3 +225,6 @@
  ydt_scarlet_province_overlord_bonus:0 ")s¢uLˆw›OIY"
  desc_ydt_scarlet_province_overlord_bonus:0 "Ïk*N)s¢uLˆwÏkgÐc›O0.1)s¢u<P0"
  ydt_pax.1.a.tt:0 "§Y²TYÍ‘°eŸeán†N6ƒog0ÙN/kÿ¡l	g%`¥bÿmN¡l	gºN¬PÃOyY»yV0—zY„vÎW^nn®Nwopkpÿw¢uT›†™„vYZfÿMbRRVËY0§!\n\n§Ra0Œ8n©sÿ§!"
+ ydt_spacetime.1.t:0 "öezzVØS"
+ ydt_spacetime.1.d:0 "^yØy„vN¹e›RÏ‘<ONNqVÍT0R†N1444t^„v'k2m0	gºNðXðywÁ‰N¹e„v)YzzÛlw)s¢u„v—IQÿmN	gºNZWðyÿ(W'YlQ„vÝR«RYÿ,TÁ‰†NL–uSsY„vrðX0°sžRN‰^ó`„v¹Lu„`6qŒg¨R0bìN„v'YlQVÉb·VŒNN«ˆ)YaµOŽ†ÿAeQ‰^ó`&&"
+ ydt_spacetime.1.a:0 "pSaŒñmIR0"

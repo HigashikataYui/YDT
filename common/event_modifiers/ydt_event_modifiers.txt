@@ -2,10 +2,6 @@ ydt_restored_tax_revenue = {
     global_tax_modifier = 0.20
 }
 
-ydt_danube_merchants = {
-    merchants = 1
-}
-
 ydt_gold_mining_regulations = {
     monthly_gold_inflation_modifier = -0.90
 }

@@ -13,6 +13,7 @@ ydt_scarlet_autocracy = {
     modifiers = {
         diplomatic_reputation = -2
         ae_impact = 0.10
+		discipline = 0.10
     }
 	government_abilities = {
 		ydt_scarlet_mechanic

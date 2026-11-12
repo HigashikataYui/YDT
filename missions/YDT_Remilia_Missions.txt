@@ -60,29 +60,9 @@ ydt_remilia_missions_5 = {
 		}
     }
 	
-	ydt_danube_trade_route = {
-		icon = mission_high_income
-		position = 3
-		required_missions = { ydt_restore_finances }
-		trigger = {
-			153 = {
-				trade_share = {
-					country = ROOT
-					share = 20
-				}
-			}
-		}
-		effect = {
-			add_country_modifier = {
-				name = ydt_danube_merchants
-				duration = -1
-			}
-		}
-	}
-	
 	ydt_turn_stone_into_gold = {
 		icon = mission_zambezi_gold
-		position = 4
+		position = 3
 		required_missions = { ydt_danube_trade_route }
 		provinces_to_highlight = {
 			province_id = 160
@@ -102,7 +82,7 @@ ydt_remilia_missions_5 = {
 	
 	ydt_develop_gold_mine = {
 		icon = dominant_economy
-		position = 5
+		position = 4
 		required_missions = { ydt_turn_stone_into_gold }
 		provinces_to_highlight = {
 			province_id = 160
@@ -127,7 +107,7 @@ ydt_remilia_missions_5 = {
 	
 	ydt_build_wallachia = {
 		icon = austria_prospers
-		position = 6
+		position = 5
 		required_missions = { ydt_develop_gold_mine }
 		provinces_to_highlight = {
 			area = wallachia_area
@@ -181,6 +161,7 @@ ydt_missions_2_issued_edict_of_giurgiu = {
 			unlock_government_reform = {
 					government_reform = ydt_gensokyo_animism
 			}
+			add_government_reform = ydt_gensokyo_animism
         }
     }
 	
@@ -767,7 +748,6 @@ ydt_missions_1_issued_edict_of_giurgiu = {
             if = {
                 limit = {
                     exists = POL
-                    valid_for_personal_unions_trigger = yes
                     POL = {
                         valid_for_personal_unions_trigger = yes
                     }

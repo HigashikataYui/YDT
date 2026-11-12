@@ -117,3 +117,45 @@ country_event = {
 		custom_tooltip = ydt_pax.1.a.tt
     }
 }
+
+namespace = ydt_spacetime
+
+country_event = {
+    id = ydt_spacetime.1
+    title = ydt_spacetime.1.t
+    desc = ydt_spacetime.1.d
+    picture = YDT_SPACETIME_ANOMALY_eventPicture
+    fire_only_once = yes
+    trigger = {
+        tag = WAL
+        is_year = 1444
+        has_regency = no
+        has_ruler = "Vlad II"
+    }
+    mean_time_to_happen = {
+        months = 6
+    }
+    option = {
+        name = ydt_spacetime.1.a
+        define_ruler = {
+			name = "Remilia Scarlet"
+			dynasty = "Draculesti"
+			adm = 3
+			dip = 1
+			mil = 6
+			age = 16
+			female = yes
+			religion = animism
+			culture = goths
+			claim = 20
+		}
+		hidden_effect = {
+			add_ruler_personality = immortal_personality
+			add_ruler_personality = cruel_personality
+			add_ruler_personality = naive_personality
+		}
+		add_mil_power = 500
+		set_country_flag = ydt_remilia
+		swap_non_generic_missions = yes
+    }
+}

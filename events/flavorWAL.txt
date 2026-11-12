@@ -21,6 +21,7 @@ country_event = {
 	trigger = {
 		tag = WAL
 		NOT = { is_year = 1477 }
+		NOT = { has_ruler = "Remilia Scarlet" }
 	}
 	
 	option = {
@@ -105,6 +106,7 @@ country_event = {
 			add_ruler_personality = cruel_personality
 			add_ruler_personality = naive_personality
 		}
+		add_mil_power = 500
 		set_country_flag = ydt_remilia
 		swap_non_generic_missions = yes
 	}
