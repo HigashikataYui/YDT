@@ -16,6 +16,7 @@ ydt_remilia_missions_3 = {
             legitimacy = 50
         }
         effect = {
+			add_adm_power = 100
             add_stability = 1
 			set_country_flag = ydt_remilia_ideas
 			swap_free_idea_group = yes
@@ -63,7 +64,7 @@ ydt_remilia_missions_5 = {
 	ydt_turn_stone_into_gold = {
 		icon = mission_zambezi_gold
 		position = 3
-		required_missions = { ydt_danube_trade_route }
+		required_missions = { ydt_restore_finances }
 		provinces_to_highlight = {
 			province_id = 160
 		}
@@ -152,8 +153,13 @@ ydt_missions_2_issued_edict_of_giurgiu = {
             }
         }
         effect = {
-            add_stability = -1
+            add_stability = -2
             change_religion = animism
+			4531 = {
+				change_religion = animism
+				add_reform_center = animism
+			}
+			custom_tooltip = ydt_animist_center_created_tt
             add_estate_loyalty = {
                 estate = estate_church
                 loyalty = -20
@@ -165,73 +171,8 @@ ydt_missions_2_issued_edict_of_giurgiu = {
         }
     }
 	
-	ydt_build_the_mansion = {
-		icon = mission_early_game_buildings
-		position = 3
-		required_missions = { }
-		provinces_to_highlight = {
-			province_id = 4531
-		}
-		trigger = {
-			4531 = {
-				owned_by = ROOT
-				development = 20
-				num_of_buildings_in_province = 3
-			}
-		}
-		effect = {
-			4531 = {
-				add_province_modifier = {
-					name = ydt_scarlet_mansion_construction
-					duration = -1
-				}
-			}
-		}
-	}
-	
-	ydt_old_companions = {
-		icon = mission_alliances
-		position = 4
-		required_missions = { ydt_build_the_mansion }
-		trigger = {
-			has_government_power = {
-				mechanic_type = ydt_scarlet_mechanic
-				power_type = ydt_scarlet_value
-				value = 25
-			}
-			legitimacy = 90
-		}
-		effect = {
-			custom_tooltip = ydt_old_companions_unlock_tt
-		}
-	}
-	
-	ydt_lessons_of_lunar_war = {
-		icon = army_reforms
-		position = 5
-		required_missions = { ydt_old_companions }
-		trigger = {
-			custom_trigger_tooltip = {
-				tooltip = ydt_lunar_war_completed_tt
-				has_country_flag = ydt_lunar_war_completed
-			}
-		}
-		effect = {
-			unlock_government_reform = {
-				government_reform = ydt_lunar_war_lessons_reform
-			}
-			if = {
-				limit = {
-					has_ruler = "Remilia Scarlet"
-				}
-				remove_ruler_personality = naive_personality
-				add_ruler_personality = free_thinker_personality
-			}
-		}
-	}
-	
 	ydt_defeat_hungary = {
-		icon = mission_landsknecht_soldier
+		icon = mission_destroy_the_hungarians
 		position = 6
 		required_missions = {
 			ydt_reclaim_romania
@@ -262,6 +203,10 @@ ydt_missions_2_issued_edict_of_giurgiu = {
 			}
 		}
 		effect = {
+			add_country_modifier = {
+				name = ydt_victory_over_hungary
+				duration = 18250
+			}
 			transdanubia_area = {
 				add_permanent_claim = ROOT
 			}
@@ -275,11 +220,10 @@ ydt_missions_2_issued_edict_of_giurgiu = {
 	}
 	
 	ydt_march_into_the_balkans = {
-		icon = mission_landsknecht_soldier
+		icon = mission_balkan_conquest
 		position = 7
 		required_missions = {
 			ydt_defeat_hungary
-			ydt_journey_to_eastern_rome
 		}
 		provinces_to_highlight = {
 			region = carpathia_region
@@ -294,6 +238,11 @@ ydt_missions_2_issued_edict_of_giurgiu = {
 			}
 		}
 		effect = {
+			add_government_power = {
+				mechanic_type = ydt_scarlet_mechanic
+				power_type = ydt_scarlet_value
+				value = 25
+			}
 			custom_tooltip = ydt_march_into_the_balkans_reward_tt
 			custom_tooltip = ydt_unlock_balkan_province_decision_tt
 			every_country = {
@@ -483,11 +432,80 @@ ydt_missions_3_issued_edict_of_giurgiu = {
 		}
 	}
 	
-	ydt_journey_to_eastern_rome = {
-		icon = mission_constantinople
+	ydt_pacify_carpathia = {
+		icon = mission_unite_home_region
 		position = 6
 		required_missions = {
 			ydt_reclaim_romania
+		}
+		provinces_to_highlight = {
+			region = carpathia_region
+			NOT = {
+				AND = {
+					owned_by = ROOT
+					controlled_by = ROOT
+					is_core = ROOT
+				}
+			}
+		}
+		trigger = {
+			carpathia_region = {
+				type = all
+				owned_by = ROOT
+				controlled_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			carpathia_region = {
+				add_local_autonomy = -25
+				add_nationalism = -20
+				add_province_modifier = {
+					name = ydt_pacified_carpathia
+					duration = 7300
+				}
+			}
+			custom_tooltip = ydt_pacify_carpathia_development_tt
+			hidden_effect = {
+				set_variable = {
+					which = ydt_carpathia_development_remaining
+					value = 10
+				}
+				while = {
+					limit = {
+						check_variable = {
+							which = ydt_carpathia_development_remaining
+							value = 1
+						}
+					}
+					subtract_variable = {
+						which = ydt_carpathia_development_remaining
+						value = 1
+					}
+					random_owned_province = {
+						limit = {
+							region = carpathia_region
+						}
+						random_list = {
+							1 = { add_base_tax = 1 }
+							1 = { add_base_production = 1 }
+							1 = { add_base_manpower = 1 }
+						}
+					}
+				}
+				set_variable = {
+					which = ydt_carpathia_development_remaining
+					value = 0
+				}
+			}
+		}
+	}
+
+	ydt_journey_to_eastern_rome = {
+		icon = mission_constantinople
+		position = 7
+		required_missions = {
+			ydt_pacify_carpathia
 		}
 		provinces_to_highlight = {
 			province_id = 151
@@ -518,16 +536,89 @@ ydt_missions_3_issued_edict_of_giurgiu = {
 			country_event = {
 				id = ydt_eastern_rome.1
 			}
+			add_country_modifier = {
+				name = ydt_inspiration_of_roman_provinces
+				duration = -1
+			}
 		}
 	}
 	
-	ydt_dominate_eastern_europe = {
-		icon = mission_king_of_eastern_europe
+	ydt_pursue_the_ottoman_remnants = {
+		icon = anatolian_frontier
 		position = 8
 		required_missions = {
-			ydt_abolish_the_knightly_orders
 			ydt_march_into_the_balkans
 			ydt_march_into_greece
+		}
+		provinces_to_highlight = {
+			region = balkan_region
+			owned_by = TUR
+		}
+		trigger = {
+			NOT = {
+				any_province = {
+					region = balkan_region
+					owned_by = TUR
+				}
+			}
+			has_government_power = {
+				mechanic_type = ydt_scarlet_mechanic
+				power_type = ydt_scarlet_value
+				value = 50
+			}
+			if = {
+				limit = {
+					exists = TUR
+				}
+				army_strength = {
+					who = TUR
+					value = 1.0
+				}
+				TUR = {
+					NOT = {
+						army_tradition = ROOT
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = ydt_anatolian_invasion_cb_tt
+			hidden_effect = {
+				every_country = {
+					limit = {
+						NOT = { tag = ROOT }
+						NOT = {
+							is_subject_of_type = ydt_scarlet_province
+						}
+						any_owned_province = {
+							region = anatolia_region
+						}
+					}
+					set_country_flag = ydt_scarlet_invasion_target_@ROOT
+				}
+			}
+			if = {
+				limit = {
+					exists = TUR
+				}
+				TUR = {
+					add_government_power = {
+						mechanic_type = ottoman_decadence_mechanic
+						power_type = ottoman_decadence
+						value = 100
+					}
+				}
+			}
+			custom_tooltip = ydt_unlock_anatolian_province_decision_tt
+		}
+	}
+
+	ydt_dominate_eastern_europe = {
+		icon = mission_king_of_eastern_europe
+		position = 9
+		required_missions = {
+			ydt_abolish_the_knightly_orders
+			ydt_pursue_the_ottoman_remnants
 		}
 		trigger = {
 			total_development = 500
@@ -536,8 +627,38 @@ ydt_missions_3_issued_edict_of_giurgiu = {
 		}
 		effect = {
 			add_prestige = 20
+			add_accepted_culture_or_dip_power = {
+				culture = transylvanian
+				free = yes
+				value = 100
+			}
+			add_accepted_culture_or_dip_power = {
+				culture = hungarian
+				free = yes
+				value = 100
+			}
+			add_accepted_culture_or_dip_power = {
+				culture = bulgarian
+				free = yes
+				value = 100
+			}
+			add_accepted_culture_or_dip_power = {
+				culture = slovak
+				free = yes
+				value = 100
+			}
+			add_accepted_culture_or_dip_power = {
+				culture = ruthenian
+				free = yes
+				value = 100
+			}
+			add_accepted_culture_or_dip_power = {
+				culture = polish
+				free = yes
+				value = 100
+			}
 			add_country_modifier = {
-				name = ydt_master_of_eastern_europe
+				name = ydt_scarlet_ascendancy
 				duration = -1
 			}
 		}
@@ -545,7 +666,7 @@ ydt_missions_3_issued_edict_of_giurgiu = {
 	
 	ydt_crush_the_third_rome = {
 		icon = mission_fall_of_third_rome
-		position = 9
+		position = 10
 		required_missions = {
 			ydt_dominate_eastern_europe
 		}
@@ -618,7 +739,7 @@ ydt_missions_3_issued_edict_of_giurgiu = {
 	
 	ydt_pax_remiliana = {
 		icon = mission_ydt_pax_remiliana
-		position = 10
+		position = 11
 		required_missions = {
 			ydt_crush_the_third_rome
 		}
@@ -662,12 +783,7 @@ ydt_missions_3_issued_edict_of_giurgiu = {
 					}
 				}
 			}
-			NOT = {
-				any_province = {
-					region = balkan_region
-					owned_by = TUR
-				}
-			}
+			NOT = { exists = TUR }
 			NOT = { exists = RUS }
 			NOT = { exists = MOS }
 			is_great_power = yes
@@ -884,6 +1000,11 @@ ydt_missions_1_issued_edict_of_giurgiu = {
 			}
 		}
 		effect = {
+			add_government_power = {
+				mechanic_type = ydt_scarlet_mechanic
+				power_type = ydt_scarlet_value
+				value = 25
+			}
 			east_prussia_area = {
 				add_permanent_claim = ROOT
 			}
@@ -895,6 +1016,31 @@ ydt_missions_1_issued_edict_of_giurgiu = {
 			hidden_effect = {
 				TEU = {
 					set_country_flag = ydt_scarlet_invasion_target_@ROOT
+				}
+			}
+			add_country_modifier = {
+				name = ydt_legacy_of_the_knightly_orders
+				duration = -1
+			}
+			if = {
+				limit = {
+					OR = {
+						current_age = age_of_discovery
+						current_age = age_of_reformation
+					}
+				}
+				custom_tooltip = ydt_catholic_knightly_orders_resentment_tt
+				hidden_effect = {
+					every_known_country = {
+						limit = {
+							religion = catholic
+							NOT = { tag = ROOT }
+						}
+						add_opinion = {
+							who = ROOT
+							modifier = ydt_abolished_knightly_orders_resentment
+						}
+					}
 				}
 			}
 		}
@@ -911,7 +1057,73 @@ ydt_missions_4_issued_edict_of_giurgiu = {
         has_country_flag = ydt_issued_edict_of_giurgiu
     }
     has_country_shield = yes
-
+	
+	ydt_build_the_mansion = {
+		icon = mission_early_game_buildings
+		position = 3
+		required_missions = { }
+		provinces_to_highlight = {
+			province_id = 4531
+		}
+		trigger = {
+			4531 = {
+				owned_by = ROOT
+				development = 20
+				num_of_buildings_in_province = 3
+			}
+		}
+		effect = {
+			4531 = {
+				add_province_modifier = {
+					name = ydt_scarlet_mansion_construction
+					duration = -1
+				}
+			}
+		}
+	}
+	
+	ydt_old_companions = {
+		icon = mission_ydt_old_companions
+		position = 4
+		required_missions = { ydt_build_the_mansion }
+		trigger = {
+			has_government_power = {
+				mechanic_type = ydt_scarlet_mechanic
+				power_type = ydt_scarlet_value
+				value = 25
+			}
+			legitimacy = 90
+		}
+		effect = {
+			custom_tooltip = ydt_old_companions_unlock_tt
+		}
+	}
+	
+	ydt_lessons_of_lunar_war = {
+		icon = army_reforms
+		position = 5
+		required_missions = { ydt_old_companions }
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = ydt_lunar_war_completed_tt
+				has_country_flag = ydt_lunar_war_completed
+			}
+		}
+		effect = {
+			change_dip = 1
+			unlock_government_reform = {
+				government_reform = ydt_lunar_war_lessons_reform
+			}
+			if = {
+				limit = {
+					has_ruler = "Remilia Scarlet"
+				}
+				remove_ruler_personality = naive_personality
+				add_ruler_personality = free_thinker_personality
+			}
+		}
+	}
+	
     ydt_march_into_bulgaria = {
         icon = push_on_to_bulgaria
         position = 6
@@ -937,6 +1149,10 @@ ydt_missions_4_issued_edict_of_giurgiu = {
             }
         }
         effect = {
+			add_country_modifier = {
+				name = ydt_bulgarian_campaign
+				duration = 18250
+			}
             bulgaria_area = {
                 add_permanent_claim = ROOT
             }
@@ -1000,5 +1216,5 @@ ydt_missions_4_issued_edict_of_giurgiu = {
 				}
 			}
 		}
-	}
+	}	
 }

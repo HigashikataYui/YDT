@@ -1,7 +1,9 @@
 ydt_scarlet_province = {
-    copy_from = vassal
-	base_liberty_desire = -50.0
-    count = vassal
+    copy_from = march
+    count = march
+    pays_overlord = 0.0
+    takes_diplo_slot = no
+    base_liberty_desire = -25.0
     is_potential_overlord = {
         has_country_flag = ydt_unlocked_scarlet_provinces
     }

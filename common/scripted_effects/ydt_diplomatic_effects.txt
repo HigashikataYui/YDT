@@ -46,6 +46,38 @@ ydt_scarlet_anathema_ae_effect = {
             which = ydt_anathema_ae
             which = ydt_anathema_distance_factor
         }
+		set_variable = {
+			which = ydt_anathema_religion_factor
+			value = 1
+		}
+		if = {
+			limit = {
+				religion = event_target:ydt_anathema_target
+			}
+			set_variable = {
+				which = ydt_anathema_religion_factor
+				value = 1.25
+			}
+		}
+		else_if = {
+			limit = {
+				religion_group = event_target:ydt_anathema_target
+			}
+			set_variable = {
+				which = ydt_anathema_religion_factor
+				value = 0.75
+			}
+		}
+		else = {
+			set_variable = {
+				which = ydt_anathema_religion_factor
+				value = 0.50
+			}
+		}
+		multiply_variable = {
+			which = ydt_anathema_ae
+			which = ydt_anathema_religion_factor
+		}
         while = {
             limit = {
                 check_variable = {
@@ -92,5 +124,9 @@ ydt_scarlet_anathema_ae_effect = {
             which = ydt_anathema_distance_factor
             value = 0
         }
+		set_variable = {
+			which = ydt_anathema_religion_factor
+			value = 0
+		}
     }
 }

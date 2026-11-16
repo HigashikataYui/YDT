@@ -52,7 +52,7 @@
  ydt_develop_gold_mine_title:0 "VÑSÑ‘ÿw"
  ydt_develop_gold_mine_desc:0 "eYSyr<SšNòTÏu˜cúQ†N,rNybÄžÑ‘0‰¿lÿw	TñmYVÇ‘ÿÿwåTØ—‰’c4l•N0¶Q¼p‰pŒT³åNÐÿwów„vSï0–NwµNÏ‘žX•ÿsY‹smN‰˜:Nø”^jOJWËzNÄ‰éwÿMQ—V^Æ–N„v®|÷NßNw‰pkpNTN¨m0"
  ydt_gold_mining_regulations:0 "Ñ‘ÿwNø”^ag‹O"
- ydt_build_wallachia_title:0 "ú^¾‹ætÉbàQšN"
+ ydt_build_wallachia_title:0 "ú^¾‹[Root.GetName]"
  ydt_build_wallachia_desc:0 "eYSyr<SšN„vÄžÑ‘ÐµbýV“^TÿTÎWG•mNeg†NêñT„v÷‹Bl0èxJWIN‰îOV4l.nÿ‘zåT:SÐx„vflšÿENSEN„vFUºNRüvNw(WËyè–MRú”‹YŽVx4Y„vSï0‚YÊNbìNÈuŽN	gYO›Ry˜VåT0"
  ydt_wallachian_construction:0 "ætÉbàQšN%„ú^¡‹R"
  ydt_return_to_animism_title:0 "ÞVRVÛlupáOðN"
@@ -83,7 +83,7 @@
  ydt_boost_scarlet_value_desc:0 "±‚9§Y100§!›Q‹N¹pÿ·ƒ—V§G10§!¹p)s¢u<PÿgY¾0R§Y100§!¹p0"
  ydt_scarlet_anathema:0 "§R)s¢uÝuZ§!"
  ydt_scarlet_anathema_title:0 "§R)s¢uÝuZ§!"
- ydt_scarlet_anathema_desc:0 "ˆmw§Y25§!¹p)s¢u<PŒT(WîvhýV„v§Y50§!¹pô•ŒQÿOvQ3zšR¦^M–NO§R5§!ÿv^(W§Y10t^§!…Qb×S§R50%§!F–›QëXl0îvhÏk¹pÑSUS¦^SObýV(WòTåwvQÖNýV¶RYµNu§R0.05§!µOeuib.V0"
+ ydt_scarlet_anathema_desc:0 "ˆmw§Y25§!¹p)s¢u<PŒT(WîvhýV„v§Y50§!¹pô•ŒQÿOvQ3zšR¦^M–NO§R5§!ÿv^(W§Y5t^§!…Qb×S§R50%§!F–›QëXl0îvhÏk¹pÑSUS¦^SObýV(WòTåwvQÖNýV¶RYµNu§R0.05§!µOeuib.V0"
  ydt_scarlet_anathema_tooltip:0 "TîvhýV¶RËe R§R)s¢uÝuZ§!0"
  ydt_scarlet_anathema_alert_tooltip:0 "§R)s¢uÝuZ§!"
  ydt_scarlet_anathema_penalty:0 "§R)s¢uÝuZ§!"
@@ -169,51 +169,49 @@
  ydt_defeat_hungary_desc:0 "yrpQ‰æt<SšNòTRVŽNbìN„vßu»lÿSYr)RùRŽUSôT/–qS	„vµc6RmN–KNætã‰0°s(Wÿ/föePŠÇ²qSÿTYYt³ls^ŸSÛ›Qÿ‰V•^ÈuÓuSYr)RùRbìN„vZÁw0"
  ydt_march_into_the_balkans_title:0 "Û›QôTSr^"
  ydt_march_into_the_balkans_desc:0 "ŽUSôT/–ø‹0WòTRVŽNbìN„v¿R›RKNNÿŽVôTSr^„vSï1Sdk^eV0ÎNšN—VÌ‘šNwm¸S0R^XSôušNy0WÿRÂˆ„vø‹ýVSÎeg)s¢ur‚„v°eéy^0"
- ydt_march_into_the_balkans_reward_tt:0 "·ƒ—VùRNb	g(W§Y¯eÉbƒl<SšN0KQW0WšN0¾SlšÐcšN0âl¯e<SšN0^XSôušNbÉbÀNaS§!0W:Såb	gwýN„vvQÖNýV¶R„v§R)s¢ueQµO§!±Rbt1u0"
+ ydt_march_into_the_balkans_reward_tt:0 "·ƒ—VùRNb	g(W§Y¯eÉbƒl<SšN0KQW0WšN0¾SlšÐcšN0âl¯e<SšN0^XSôušN§!b§YÉbÀNaS§!:SßWåb	gwýN„vvQÖNýV¶R„v§R)s¢ueQµO§!±Rbt1u0"
  YDT_SCARLET_INVASION_COUNTRIES:0 "«ˆcšR:N)s¢ueQµOîvh„výV¶R"
  YBP:0 "ôTSr^Lˆw"
  YBP_ADJ:0 "ôTSr^"
  ydt_scarlet_province:0 ")s¢uLˆw"
  ydt_scarlet_province_title:0 ")s¢uLˆw"
  ydt_scarlet_province_title_plural:0 ")s¢uLˆw"
- ydt_scarlet_province_long_desc:0 ")s¢uLˆw/f×S—RINýV¡r–„v0W¹eLˆ?eýV¶RÿåN)s¢uLˆw6R¡rt–N†˜Wÿv^bÅbnfD–¸^„v³uzIN¡R0"
+ ydt_scarlet_province_long_desc:0 ")s¢uLˆw/f¥c×S—RINýVßu–„v0W¹eLˆ?e^SýVÿN`S(uY²NsQû|ÿmNàe—4³u^SýVz0TLˆwìrËz¡‹—røvùRžR›R&^eg„vìrËz>PTÿNÂS R—RINýV„vÛIeb2–¡Vb‰NÿNàeÕl«ˆY²NTv^bteT0Ïk*N)s¢uLˆw:Nåb	g)s¢u:g6R„v—RINýVÐc›OÏkg0.1¹p)s¢u<P0"
  ydt_scarlet_province_is_our:0 "$NAME|Y$/fbìN„v)s¢uLˆw0"
  ydt_scarlet_province_reform:0 ")s¢uLˆw6R"
  ydt_scarlet_province_reform_desc:0 "1usY‹sˆcCg„vLˆw?eœ^ßu–0W¹e‹N¡R0LˆwN—VÅdê9eØS?eSOÿvQ»lNNTáOðN„vESlGW×STNéy^ÝO²b0"
  ydt_establish_balkan_province_title:0 "ôTSr^Lˆw"
  ydt_establish_balkan_province_desc:0 "ôTSr^ø‹0WòT³ueQbìN„vHrþV0ú^ËzßuN„vLˆw?eœ^ÿSSV0W‹N¡R²N1uôv^SsY‹s„vLˆ?e:g„g¡rtÿO)s¢u„véy^Nb9hŽN²qSNwm¸SKNô•0"
- ydt_establish_balkan_province_tt:0 "ú^Ëz^SýV§YôTSr^Lˆw§!ÿ^SýV‰|‹W:N§R)s¢uLˆw§!0S§Y¯eÉbƒl<SšN0KQW0WšN0¾SlšÐcšN0âl¯e<SšN0^XSôušNŒTÉbÀNaS§!hQèwýNˆcˆNå‹ýVÿv^KˆNvQŒRte8hÃV0å‹ýVžRLˆ§Y)s¢uLˆw6R§!0"
- ydt_unlock_balkan_province_decision_tt:0 "ã‰•Ny˜³Q®‹ÿAQ¸‹bìN(WŒRhQµc6RôTSr^öeSvQÊ‘>e:N§R)s¢uLˆw§!0"
+ ydt_establish_balkan_province_tt:0 "ú^Ëz^SýV§YôTSr^Lˆw§!ÿ^SýV‰|‹W:N§R)s¢uLˆw§!0SbýV(W§Y¯eÉbƒl<SšN0KQW0WšN0¾SlšÐcšN0âl¯e<SšN0^XSôušNŒTÉbÀNaS§!µc6R„vhQèwýNˆcˆNå‹ýVÿv^KˆNvQÙ›N0W:SNb	gwýN„v8hÃV0å‹ýVžRLˆ§Y)s¢uLˆw6R§!0å‹Lˆw„v–™ýS9e—R:N§YÛlupº‹§!ÿv^ú^Ëz§R)s¢u^y>y§!0"
+ ydt_unlock_balkan_province_decision_tt:0 "ã‰•Ny˜³Q®‹ÿAQ¸‹bìN(Wµc6RôTSr^öeSvQÊ‘>e:N§R)s¢uLˆw§!0"
  YPP:0 "nfœëXLˆw"
  YPP_ADJ:0 "nfœëX"
  ydt_establish_prussian_province_title:0 "nfœëXLˆw"
  ydt_establish_prussian_province_desc:0 "‘šëXâV„vçeéy^òT«ˆÖSÿnfœëX„v/nãSNy0W†vòTRVŽNbìN0åNFOýl:NLˆw–™œ^ÿú^Ëzôv^SsY‹s„v0W¹e?eœ^ÿ©‹)s¢u„v×e^Ø˜lbŽNâlW„vwmKNèn0"
- ydt_establish_prussian_province_tt:0 "ú^Ëz^SýV§YnfœëXLˆw§!ÿ^SýV‰|‹W:N§R)s¢uLˆw§!0S§Y‰nfœëXŒTNnfœëX§!hQèwýNˆcˆNå‹ýVÿv^KˆNvQŒRte8hÃV0žRLˆ§Y)s¢uLˆw6R§!0"
- ydt_unlock_prussian_province_decision_tt:0 "ã‰•Ny˜³Q®‹ÿAQ¸‹bìN(WŒRhQµc6RnfœëXöeSvQÊ‘>e:N§R)s¢uLˆw§!0"
+ ydt_establish_prussian_province_tt:0 "ú^Ëz^SýV§YnfœëXLˆw§!ÿ^SýV‰|‹W:N§R)s¢uLˆw§!0SbýV(W§Y‰nfœëXŒTNnfœëX§!µc6R„vhQèwýNˆcˆNå‹ýVÿv^KˆNvQnfœëX0W:SNb	gwýN„v8hÃV0žRLˆ§Y)s¢uLˆw6R§!0å‹Lˆw„v–™ýS9e—R:N§YÛlupº‹§!ÿv^ú^Ëz§R)s¢u^y>y§!0"
+ ydt_unlock_prussian_province_decision_tt:0 "ã‰•Ny˜³Q®‹ÿAQ¸‹bìN(Wµc6RnfœëXöeSvQÊ‘>e:N§R)s¢uLˆw§!0"
  ydt_march_into_bulgaria_title:0 "Û›QÝO R)RšN"
  ydt_march_into_bulgaria_desc:0 "idS¾ôušNòTbrbrŒcác(WbìNKb-NÿN¹e„v¹ƒX—V0RéTúV0‚YÊNÿ/föePSîvIQ•bTYYt³lWS¸SÿTÝO R)RšNN/•)R¯eyrÉb¨cÛÿ:NsY‹sVŸŽVôTSr^y0W„vSï0"
  ydt_march_into_greece_title:0 "Û›Q^J"
  ydt_march_into_greece_desc:0 "YYt³lWS¸SòTK„eQbìN„vŒcácÿŽV1r4twm„vSï1Sdk^eV0ÎNr‚÷–¯e„vÎW±W0RidÌ‘šN„vwm¸Sÿ^Jø‹0WSÎeg)s¢u„v×e^0"
- ydt_march_into_greece_cb_tt:0 "·ƒ—VùRNb	g(W§Yr‚÷–¯e0lšvQ˜0idÌ‘šN0^JSèb?–SôT<SšN§!:SßWåb	gwýN„vvQÖNýV¶R„v8lEN§R)s¢ueQµO§!±Rbt1u0"
- ydt_unlock_greek_province_decision_tt:0 "ã‰•Ny˜³Q®‹ÿAQ¸‹bìN(WŒRhQµc6R^J0W:SöeSvQÊ‘>e:N§R)s¢uLˆw§!0"
+ ydt_march_into_greece_cb_tt:0 "·ƒ—VùRNb	g(W§Yr‚÷–¯e0lšvQ˜0idÌ‘šN0^JSè§!b§Y?–SôT<SšN§!:SßWåb	gwýN„vvQÖNýV¶R„v8lEN§R)s¢ueQµO§!±Rbt1u0"
+ ydt_unlock_greek_province_decision_tt:0 "ã‰•Ny˜³Q®‹ÿAQ¸‹bìN(Wµc6R^J0W:SöeSvQÊ‘>e:N§R)s¢uLˆw§!0"
  YGP:0 "^JLˆw"
  YGP_ADJ:0 "^J"
  ydt_establish_greek_province_title:0 "^JLˆw"
  ydt_establish_greek_province_desc:0 "^Jø‹0WòTRVŽNbìN„vßu»l0åNÅ–xQ:NLˆw–™œ^ÿú^Ëzôv^SsY‹s„v0W¹e?eœ^ÿS1r4twm¿l¸SNôTSr^WSè³ueQßuN„v)s¢uéy^0"
- ydt_establish_greek_province_tt:0 "ú^Ëz^SýV§Y^JLˆw§!ÿ^SýV‰|‹W:N§R)s¢uLˆw§!0S§Yr‚÷–¯e0lšvQ˜0idÌ‘šN0^JSèŒT?–SôT<SšN§!hQèwýNˆcˆNå‹ýVÿv^KˆNvQŒRte8hÃV0žRLˆ§Y)s¢uLˆw6R§!0"
+ ydt_establish_greek_province_tt:0 "ú^Ëz^SýV§Y^JLˆw§!ÿ^SýV‰|‹W:N§R)s¢uLˆw§!0SbýV(W§Yr‚÷–¯e0lšvQ˜0idÌ‘šN0^JSèŒT?–SôT<SšN§!µc6R„vhQèwýNˆcˆNå‹ýVÿv^KˆNvQ0W:SNb	gwýN„v8hÃV0žRLˆ§Y)s¢uLˆw6R§!0å‹Lˆw„v–™ýS9e—R:N§YÛlupº‹§!ÿv^ú^Ëz§R)s¢u^y>y§!0"
  ydt_dominate_eastern_europe_title:0 "î•ŸN'k"
- ydt_dominate_eastern_europe_desc:0 "‘šëXâV„vçeéy^òTÏu)TƒnÿôTSr^N^J„v'Yè•mNòTTbìN^eV0íQPË–„v†˜WN:VÛv„v›Q–ÿbìNSû«ŽR:Vÿ©‹)s¢u‘šuQ„vÁ”DŽÍT‰VN'ks^ŸS0"
- ydt_master_of_eastern_europe:0 "î•ŸN'k"
- desc_ydt_master_of_eastern_europe:0 "N'k„v^²ˆs^ŸS:NbìN„v‘šuQÐc›O†NEQ³„vuQXTNblš0N/e­‹Ãu	g.t0²QûQÌQ‰S„v‘šuQ›QâVÿSMckSsY‹s(WÙGrW0WN„vCgZ0"
+ ydt_dominate_eastern_europe_desc:0 "‘šëXâV„vçeéy^òTÏu)TƒnÿôTSr^N^J„v'Yè•mNòTTbìN^eV0íQPË–„v†˜WN:VÛv„v›Q–ÿbìNSû«ŽR:Vÿ©‹)s¢u<riN'ks^ŸS0"
  ydt_crush_the_third_rome_title:0 "‰|Žx,r	NWlš"
  ydt_crush_the_third_rome_desc:0 "S¹e„vßu»lwêðyWlš„vçubwÿOþVSN'kø‹0W³ueQêñT„vCgVgKNN0©‹bìN„v‘šuQèŠœ^X<SšNNË–IƒŸSÿåN‹SP'`„v›Q¿R‰|ŽxÙNÎ‘ÃVÿT«ƒ¯eÑy±RJT)s¢uöeãN„v0Reg0"
- ydt_crush_the_third_rome_cb_tt:0 "·ƒ—VùRNb	g(W§YÄOW¯e'Y:S§!åb	gwýN„vvQÖNýV¶R„v8lEN§R)s¢ueQµO§!±Rbt1u0"
- ydt_unlock_russian_province_decision_tt:0 "ã‰•Ny˜³Q®‹ÿAQ¸‹bìN(WŒRhQµc6RÄOW¯e0W:SöeSvQÊ‘>e:N§R)s¢uLˆw§!0"
+ ydt_crush_the_third_rome_cb_tt:0 "·ƒ—VùRNb	g(W§YÄOW¯e§!0W:Såb	gwýN„vvQÖNýV¶R„v8lEN§R)s¢ueQµO§!±Rbt1u0"
+ ydt_unlock_russian_province_decision_tt:0 "ã‰•Ny˜³Q®‹ÿAQ¸‹bìN(Wµc6RÄOW¯e0W:SöeSvQÊ‘>e:N§R)s¢uLˆw§!0"
  YRP:0 "ÄOW¯eLˆw"
  YRP_ADJ:0 "ÄOW¯e"
  ydt_establish_russian_province_title:0 "ÄOW¯eLˆw"
  ydt_establish_russian_province_desc:0 ",r	NWlš„vÎ‘ÃVòT«ˆ‰|ŽxÿÄOW¯eø‹0WKSRVbìN„vßu»l0åN«ƒ¯eÑy:NLˆw–™œ^ÿú^Ëzôv^SsY‹s„v0W¹e?eœ^ÿ©‹)s¢u„véy^ö^8OóS¹e„vîh—gNê–ŸS0"
- ydt_establish_russian_province_tt:0 "ú^Ëz^SýV§YÄOW¯eLˆw§!ÿ^SýV‰|‹W:N§R)s¢uLˆw§!0S§YÄOW¯e'Y:S§!hQèwýNˆcˆNå‹ýVÿv^KˆNvQŒRte8hÃV0žRLˆ§Y)s¢uLˆw6R§!0"
+ ydt_establish_russian_province_tt:0 "ú^Ëz^SýV§YÄOW¯eLˆw§!ÿ^SýV‰|‹W:N§R)s¢uLˆw§!0SbýV(W§YÄOW¯e§!0W:Sµc6R„vhQèwýNˆcˆNå‹ýVÿv^KˆNvQ0W:ShQèwýN„v8hÃV0žRLˆ§Y)s¢uLˆw6R§!0å‹Lˆw„v–™ýS9e—R:N§YÛlupº‹§!ÿv^ú^Ëz§R)s¢u^y>y§!0"
  ydt_pax_remiliana_title:0 "[Root.GetName]»lN„vŒTs^"
  ydt_pax_remiliana_desc:0 "ÎNâlW„vwm0R1r4twmÿÎNŽUSôT/–²qS0RÄOW¯e„vîh—gÿfåe‰N—eNO„vø‹ýVòTRVŽNTNéy^0,r	NWlš„vÎ‘ÃVS:NSWÿeY¯eüfmN«ˆúQôTSr^0‚YÊNÿ)s¢u„v×e^NbÊSKNYÿSÎeg•EN„v‰RR0"
  ydt_pax_remiliana_land_tt:0 "§YŽUSôT/–0âlpQ0âlW„v0ôTSr^0œ^X<SšN0N'k'YIƒŸSŒTÄOW¯e§!'Y:S„vhQèwýNGW1uê«Žb^—g/^SýVµc6R0"
@@ -228,3 +226,46 @@
  ydt_spacetime.1.t:0 "öezzVØS"
  ydt_spacetime.1.d:0 "^yØy„vN¹e›RÏ‘<ONNqVÍT0R†N1444t^„v'k2m0	gºNðXðywÁ‰N¹e„v)YzzÛlw)s¢u„v—IQÿmN	gºNZWðyÿ(W'YlQ„vÝR«RYÿ,TÁ‰†NL–uSsY„vrðX0°sžRN‰^ó`„v¹Lu„`6qŒg¨R0bìN„v'YlQVÉb·VŒNN«ˆ)YaµOŽ†ÿAeQ‰^ó`&&"
  ydt_spacetime.1.a:0 "pSaŒñmIR0"
+ ydt_sacrifice_manpower:0 "œœNˆIY.s"
+ ydt_sacrifice_manpower_desc:0 "ˆmw§Y10,000§!ºN›Rÿ·ƒ—V§G25§!¹p)s¢u<PÿgY¾0R§Y100§!¹p0"
+ ydt_inspiration_of_roman_provinces:0 "WlšLˆw6R„v/TÑS"
+ desc_ydt_inspiration_of_roman_provinces:0 "NWlš„vLˆw6R¦^:NbìNÐc›O†N°e„vßu»l`ï00W¹e?e…SôucT0W„véy^ÿv^:N—RINýVÐc›OôfY›Q‹N/ecÿO^–„v†˜WNQb:N»yÃV„v9hn0"
+ ydt_animist_center_of_reformation:0 ")s¢u^y>y"
+ ydt_animist_center_created_tt:0 "(W§Y[4531.GetName]§!ú^Ëz§R)s¢u^y>y§!0"
+  ydt_pacify_carpathia_title:0 "s^šRŽUSôT/–"
+ ydt_pacify_carpathia_desc:0 "qS	N³lAmþfSÙGrW0WRrR:N|Vdk‰N—e„v†˜ýV0‚YÊNÿÎNætÉbàQšN„vs^ŸS0RSYr)R„vy0WÿbìNÅV‰˜O'YlQ„vCgZñmeQÏkNµ^ÎWG•ÿ©‹çeåe„v·u‰NRVŽN‰lÂR0"
+ ydt_pacified_carpathia:0 "ŽUSôT/–„vs^šR"
+ desc_ydt_pacified_carpathia:0 "0W¹eéy^òTÏub`YÿT0W?e…Sckek¥c×S-N.Y„vßu–0"
+ ydt_pacify_carpathia_development_tt:0 "(W§YŽUSôT/–0W:S§!„vwýN-N–:gRM‘I`¡‹§G10§!¹pÑSUS¦^0"
+ ydt_pursue_the_ottoman_remnants_title:0 "œRSiRÇRýwzÇR"
+ ydt_pursue_the_ottoman_remnants_desc:0 "eY¯eüf„v×e^òTÎNôTSr^»SÿFOÖNìNÍN(WwmáS|V¸Ste˜‹k›QÿIr…VwSWÍ‘eg„v:gO0bìNNýw©‹íw‚f„vÜw)Rb:NNN:Wb‰N„v^U^0/nÇwmáSÿñmeQ‰R³uXb)RšNÿ©‹Ï‚9NQàeÍ‘te×eŸKNåe0"
+ ydt_anatolian_invasion_cb_tt:0 "·ƒ—VùRNb	g(W§Y‰R³uXb)RšN§!0W:Såb	gwýN„výV¶R„v8lEN§R)s¢ueQµO§!±Rbt1u0"
+ ydt_unlock_anatolian_province_decision_tt:0 "ã‰•Ny˜³Q®‹ÿAQ¸‹bìN(Wµc6R‰R³uXb)RšN0W:SöeSvQÊ‘>e:N§R)s¢uLˆw§!0"
+ YAP:0 "‰R³uXb)RšNLˆw"
+ YAP_ADJ:0 "‰R³uXb)RšN"
+ ydt_establish_anatolian_province_title:0 "‰R³uXb)RšNLˆw"
+ ydt_establish_anatolian_province_desc:0 "Ï‚9Nçeåe„vy0WÿSb:N)s¢uéy^(WšN2m„vËz³KNY0åN‰RaSÉb:NLˆw–™œ^ÿteTØšŸS0qS0WN¿lwm„v?e¡RÿORce„vÎWG•RVŽNßuN„vßu–0"
+ ydt_establish_anatolian_province_tt:0 "ú^Ëz^SýV§Y‰R³uXb)RšNLˆw§!ÿ^SýV‰|‹W:N§R)s¢uLˆw§!ÿ–™ýMOŽN§Y[326.GetName]§!0\nSbýV(W§Y‰R³uXb)RšN§!0W:Såb	g„vhQèwýNˆcˆNå‹ýVÿv^OvQ·ƒ—Vå‹0W:S§YNb	gwýN„v8hÃV§!0\nå‹ýVžRLˆ§Y)s¢uLˆw6R§!0§Y[326.GetName]§!9e—R:N§YÛlupº‹§!ÿv^ú^Ëz§R)s¢u^y>y§!0"
+ ydt_victory_over_hungary:0 "ŽUSôT/–„vVìS"
+ desc_ydt_victory_over_hungary:0 "ùRSYr)R„vÜw)RéTúV†NbìN„v›Q‹N9húW0ôfŒR„U„vVßRNeˆÙuSOû|ÿSnnN­e0W:NMR¿u“uQXT0"
+ ydt_bulgarian_campaign:0 "%c^ÝO R)RšN"
+ desc_ydt_bulgarian_campaign:0 "›Q×eŠÇYYt³lÿÜw)R„vˆmo`.OMT/eè–0SëXìNøváOÿôTSr^„v²qSmNàeÕlI–/cbìN„vÛ›Q0"
+ ydt_scarlet_ascendancy:0 ")s¢u8—Cg"
+ desc_ydt_scarlet_ascendancy:0 "N'kø‹ýVòTÁ‰Æ‹0R'YlQ„vZ¿R0Üw)R0›QäNNœœNˆÿSGlZw:Nôf R:VÛv„v)s¢uKN›R0"
+ ydt_legacy_of_the_knightly_orders:0 "‘šëXâV„v›Q‹NWµN"
+ desc_ydt_legacy_of_the_knightly_orders:0 "çeåe‘šëXâV‹†òTã‰ceÿvQ%Nte„vªu‹VNÍdÃuKNÕltS«ˆ³ueQbìN„v›Q6R0ÎNdkÿ‘šëX„vQRS:N)s¢u„v×e^w%c¨R0"
+ ydt_abolished_knightly_orders_resentment:0 "ÖS)YINYe‘šëXâV"
+ ydt_catholic_knightly_orders_resentment_tt:0 "Nb	gòTÑS°s„v§Y)YINYeýV¶R§!ùRbýV„v‹Ya¦^§R25§!0"
+ ydt_puppeteer_of_bucharest:0 "^ RÒR¯eyr„vºNvP^"
+ desc_ydt_puppeteer_of_bucharest:0 "egê^ RÒR¯eyr„vºNvP^ÿ:NÙGrW0W&^eg†NN/eNTûR8^„vTY›Q0ô‹wegÿÙMOºNvP^|QT›Õl^ÿØNÙGr'Y0W‡˜	gnn0"
+ ydt_scarlet_restraint:0 ")s¢u„vKQ6R"
+ ydt_scarlet_restraint_desc:0 "ˆmw§Y50§!¹p)s¢u<PN§Y10§!¹pZgÿONb	gýV¶RùRbýV„vµOeuib.VÏQS§G10§!¹p0"
+ ydt_scarlet_restraint_ae_tt:0 "Nb	gýV¶RùRbýV„vµOeuib.VÏQS§G10§!¹p0"
+ ydt_integrate_carpathia_title:0 "IuŽUSôT/–"
+ ydt_integrate_carpathia_desc:0 "ŽUSôT/–ø‹0W‹†òTRVŽNbìN„v¿R›RKNNÿtSÍN×SNT?e…SN0W¹e†˜IN„v¡r–0/föeP6eâbÙ›NRce„vCgÄgÿSqS	2NµO„vW0W³ueQßuN„vLˆ?eSOû|0"
+ ydt_integrate_carpathia_subjects_tt:0 "6eÞVNb	g^—g/^SýV(W§YŽUSôT/–0W:S§!åb	g„v8hÃVwýNÿûyd–ŸS^SýV(WÙ›NwýN„v8hÃVÿv^OvQb:NbýV8hÃV0Ïk*N«ˆ6eÞVW0W„v^SýVìrËz>PTžX R§R25§!*NŒvR¹pÿùRbýV‹Ya¦^§R25§!0"
+ ydt_integrate_carpathia_modifier_tt:0 "§YŽUSôT/–0W:S§!Nb	gwýN·ƒ—V8lENLˆ?eîOckÿSV0Wôv^SÞTôu²b9§G25%§!0wýN»ltb,g§G10%§!0îOckÅN(WwýN1ubýVåb	göeuHe0"
+ ydt_carpathian_administration:0 "IuŽUSôT/–"
+ desc_ydt_carpathian_administration:0 "Rce„v0W¹eCgÄgòT«ˆteTÿßuN„v?e…SNLˆ?e6R¦^M–NO†NôucÙGrW0W„vV/e0"
+ ydt_carpathian_land_seizure:0 "6eÞVŽUSôT/–†˜0W"
+ ydt_integrate_carpathia:0 "IuŽUSôT/–"

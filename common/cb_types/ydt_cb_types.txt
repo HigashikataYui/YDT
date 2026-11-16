@@ -3,7 +3,12 @@ cb_ydt_scarlet_invasion = {
     prerequisites = {
         FROM = {
             NOT = {
-                is_subject_of_type = ydt_scarlet_province
+                AND = {
+                    is_subject = yes
+                    NOT = {
+                        is_subject_of_type = tributary_state
+                    }
+                }
             }
             has_country_flag = ydt_scarlet_invasion_target_@ROOT
         }

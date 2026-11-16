@@ -1,0 +1,20 @@
+spriteTypes = {
+    spriteType = {
+        name = "GFX_ydt_scarlet_military"
+        texturefile = "gfx/interface/government_mechanics/ydt/ydt_scarlet_military.dds"
+        loadType = "INGAME"
+        transparencecheck = yes
+    }
+    spriteType = {
+        name = "GFX_ydt_scarlet_manpower"
+        texturefile = "gfx/interface/government_mechanics/ydt/ydt_scarlet_manpower.dds"
+        loadType = "INGAME"
+        transparencecheck = yes
+    }
+		spriteType = {
+		name = "GFX_ydt_scarlet_restraint"
+		texturefile = "gfx/interface/government_mechanics/ydt/ydt_scarlet_restraint.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+}

@@ -6,6 +6,7 @@ country_decisions = {
             has_estate_privilege = ydt_clergy_opposition
         }
         allow = {
+			always = no
             stability = 2
         }
         effect = {
@@ -360,6 +361,123 @@ country_decisions = {
 			}
 			hidden_effect = {
 				set_country_flag = ydt_remilia_matured
+			}
+		}
+	}
+	
+	ydt_integrate_carpathia = {
+		major = yes
+		potential = {
+			mission_completed = ydt_reclaim_romania
+			NOT = {
+				has_country_flag = ydt_integrated_carpathia
+			}
+			carpathia_region = {
+				type = all
+				OR = {
+					owned_by = ROOT
+
+					owner = {
+						is_subject_of = ROOT
+
+						NOT = {
+							is_subject_of_type = tributary_state
+						}
+					}
+				}
+			}
+		}
+		allow = {
+			NOT = {
+				any_owned_province = {
+					region = carpathia_region
+
+					NOT = {
+						is_core = ROOT
+					}
+				}
+			}
+			NOT = {
+				any_subject_country = {
+					NOT = {
+						is_subject_of_type = tributary_state
+					}
+
+					any_owned_province = {
+						region = carpathia_region
+
+						NOT = {
+							is_core = PREV
+						}
+					}
+				}
+			}
+			NOT = {
+				any_subject_country = {
+					NOT = {
+						is_subject_of_type = tributary_state
+					}
+					any_owned_province = {
+						region = carpathia_region
+					}
+					liberty_desire = 50
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					any_subject_country = {
+						NOT = {
+							is_subject_of_type = tributary_state
+						}
+						any_owned_province = {
+							region = carpathia_region
+							is_core = PREV
+						}
+					}
+				}
+				custom_tooltip = ydt_integrate_carpathia_subjects_tt
+				hidden_effect = {
+					every_subject_country = {
+						limit = {
+							NOT = {
+								is_subject_of_type = tributary_state
+							}
+							any_owned_province = {
+								region = carpathia_region
+								is_core = PREV
+							}
+						}
+						add_liberty_desire = 25
+						add_opinion = {
+							who = ROOT
+							modifier = ydt_carpathian_land_seizure
+						}
+						every_owned_province = {
+							limit = {
+								region = carpathia_region
+								is_core = PREV
+							}
+							remove_core = PREV
+							add_core = ROOT
+							cede_province = ROOT
+						}
+					}
+				}
+			}
+			else = {
+				add_prestige = 20
+			}
+			custom_tooltip = ydt_integrate_carpathia_modifier_tt
+			hidden_effect = {
+				set_country_flag = ydt_integrated_carpathia
+				every_province = {
+					limit = {
+						region = carpathia_region
+					}
+					add_province_triggered_modifier = ydt_carpathian_administration
+				}
 			}
 		}
 	}

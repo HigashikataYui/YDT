@@ -78,7 +78,7 @@ ydt_scarlet_mechanic = {
     }
     interactions = {
         ydt_boost_scarlet_value = {
-            icon = GFX_prussian_militarization_upgrade
+            icon = GFX_ydt_scarlet_military
             trigger = {
                 mil_power = 100
                 NOT = {
@@ -99,5 +99,60 @@ ydt_scarlet_mechanic = {
             }
             cooldown_years = 0
         }
+		ydt_sacrifice_manpower = {
+			icon = GFX_ydt_scarlet_manpower
+			trigger = {
+				manpower = 10
+				NOT = {
+					has_government_power = {
+						mechanic_type = ydt_scarlet_mechanic
+						power_type = ydt_scarlet_value
+						value = 100
+					}
+				}
+			}
+			effect = {
+				add_manpower = -10
+				add_government_power = {
+					mechanic_type = ydt_scarlet_mechanic
+					power_type = ydt_scarlet_value
+					value = 25
+				}
+			}
+			cooldown_years = 1
+		}
+		ydt_scarlet_restraint = {
+			icon = GFX_ydt_scarlet_restraint
+			trigger = {
+				prestige = 10
+				has_government_power = {
+					mechanic_type = ydt_scarlet_mechanic
+					power_type = ydt_scarlet_value
+					value = 50
+				}
+			}
+			effect = {
+				add_government_power = {
+					mechanic_type = ydt_scarlet_mechanic
+					power_type = ydt_scarlet_value
+					value = -50
+				}
+				add_prestige = -10
+				custom_tooltip = ydt_scarlet_restraint_ae_tt
+				hidden_effect = {
+					every_country = {
+						limit = {
+							NOT = { tag = ROOT }
+						}
+						add_aggressive_expansion = {
+							who = ROOT
+							value = -10
+							apply_calc = no
+						}
+					}
+				}
+			}
+			cooldown_years = 5
+		}
     }
 }

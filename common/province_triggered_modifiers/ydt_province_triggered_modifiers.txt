@@ -1,0 +1,12 @@
+ydt_carpathian_administration = {
+    potential = {
+        region = carpathia_region
+    }
+    trigger = {
+        owner = {
+            has_country_flag = ydt_integrated_carpathia
+        }
+    }
+    local_state_maintenance_modifier = -0.25
+    local_governing_cost = -0.10
+}
