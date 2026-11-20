@@ -1,0 +1,7 @@
+spriteTypes = {
+    spriteType = {
+        name = "YDT_SPACETIME_ANOMALY_eventPicture"
+        texturefile = "gfx/event_pictures/ydt_spacetime_anomaly.dds"
+        alwaystransparent = yes
+    }
+}

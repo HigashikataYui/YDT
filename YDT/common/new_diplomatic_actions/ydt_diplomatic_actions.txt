@@ -1,0 +1,121 @@
+ydt_scarlet_anathema = {
+    category = covert
+    require_acceptance = no
+    is_visible = {
+        has_reform = ydt_scarlet_autocracy
+        has_government_mechanic = ydt_scarlet_mechanic
+        NOT = { tag = FROM }
+    }
+    is_allowed = {
+        has_government_power = {
+            mechanic_type = ydt_scarlet_mechanic
+            power_type = ydt_scarlet_value
+            value = 25
+        }
+        if = {
+			limit = {
+				FROM = {
+					is_subject_other_than_tributary_trigger = yes
+				}
+			}
+			FROM = {
+				overlord = {
+					ROOT = {
+						has_spy_network_in = {
+							who = PREV
+							value = 50
+						}
+					}
+				}
+			}
+		}
+		else = {
+			has_spy_network_in = {
+				who = FROM
+				value = 50
+			}
+		}
+    }
+    on_accept = {
+        add_government_power = {
+            mechanic_type = ydt_scarlet_mechanic
+            power_type = ydt_scarlet_value
+            value = -25
+        }
+        if = {
+			limit = {
+				FROM = {
+					is_subject_other_than_tributary_trigger = yes
+				}
+			}
+			FROM = {
+				overlord = {
+					ROOT = {
+						add_spy_network_in = {
+							who = PREV
+							value = -25
+						}
+					}
+				}
+			}
+		}
+		else = {
+			add_spy_network_in = {
+				who = FROM
+				value = -50
+			}
+		}
+        FROM = {
+            add_stability = -5
+            add_country_modifier = {
+                name = ydt_scarlet_anathema_penalty
+                duration = 1825
+            }
+			add_opinion = {
+				who = ROOT
+				modifier = ydt_scarlet_anathema_resentment
+			}
+        }
+        custom_tooltip = ydt_scarlet_anathema_ae_tt
+        hidden_effect = {
+            ydt_scarlet_anathema_ae_effect = yes
+        }
+		custom_tooltip = ydt_permanent_scarlet_invasion_tt
+		hidden_effect = {
+			FROM = {
+				clr_country_flag = ydt_anathema_invasion_target_@ROOT
+				set_country_flag = ydt_anathema_invasion_target_@ROOT
+			}
+		}
+    }
+}
+
+ydt_scarlet_grace = {
+    category = influence
+    require_acceptance = no
+    is_visible = {
+        has_reform = ydt_scarlet_autocracy
+        has_government_mechanic = ydt_scarlet_mechanic
+        NOT = { tag = FROM }
+    }
+    is_allowed = {
+        has_government_power = {
+            mechanic_type = ydt_scarlet_mechanic
+            power_type = ydt_scarlet_value
+            value = 50
+        }
+    }
+    on_accept = {
+        add_government_power = {
+            mechanic_type = ydt_scarlet_mechanic
+            power_type = ydt_scarlet_value
+            value = -50
+        }
+        FROM = {
+            add_opinion = {
+                who = ROOT
+                modifier = ydt_scarlet_grace_opinion
+            }
+        }
+    }
+}

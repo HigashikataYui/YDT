@@ -1,0 +1,7 @@
+spriteTypes = {
+    spriteType = {
+        name = "GFX_ydt_mainmenu_logo"
+        texturefile = "gfx/interface/ydt_mainmenu_logo.dds"
+        noOfFrames = 1
+    }
+}

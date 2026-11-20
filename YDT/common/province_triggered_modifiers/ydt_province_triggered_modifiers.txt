@@ -1,0 +1,26 @@
+ydt_carpathian_administration = {
+    potential = {
+        region = carpathia_region
+    }
+    trigger = {
+        owner = {
+            has_country_flag = ydt_integrated_carpathia
+        }
+    }
+    local_state_maintenance_modifier = -0.25
+    local_governing_cost = -0.10
+}
+
+ydt_wallachian_construction_local = {
+    potential = {
+        region = carpathia_region
+    }
+    trigger = {
+        owner = {
+            has_country_flag = ydt_completed_wallachian_construction
+        }
+    }
+    trade_goods_size = 1
+    local_build_cost = -0.10
+    local_build_time = -0.10
+}

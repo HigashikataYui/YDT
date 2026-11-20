@@ -1,0 +1,1387 @@
+country_decisions = {
+    ydt_establish_balkan_province = {
+        major = yes
+        potential = {
+            tag = WAL
+            has_country_flag = ydt_unlocked_scarlet_provinces
+            mission_completed = ydt_march_into_the_balkans
+            NOT = {
+                has_country_flag = ydt_established_balkan_province
+            }
+            NOT = {
+                exists = YBP
+            }
+        }
+        provinces_to_highlight = {
+            OR = {
+                area = slavonia_area
+                area = croatia_area
+                area = east_adriatic_coast_area
+                area = bosnia_area
+                area = serbia_area
+                area = rascia_area
+            }
+            OR = {
+                NOT = {
+                    OR = {
+                        owned_by = ROOT
+                        owner = {
+                            is_subject_of = ROOT
+                            NOT = {
+                                is_subject_of_type = tributary_state
+                            }
+                        }
+                    }
+                }
+                AND = {
+                    province_id = 4239
+                    NOT = {
+                        OR = {
+                            controlled_by = ROOT
+                            controller = {
+                                is_subject_of = ROOT
+                                NOT = {
+                                    is_subject_of_type = tributary_state
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        allow = {
+            is_subject = no
+            is_at_war = no
+            calc_true_if = {
+                all_province = {
+                    OR = {
+                        area = slavonia_area
+                        area = croatia_area
+                        area = east_adriatic_coast_area
+                        area = bosnia_area
+                        area = serbia_area
+                        area = rascia_area
+                    }
+                    OR = {
+                        owned_by = ROOT
+                        owner = {
+                            is_subject_of = ROOT
+                            NOT = {
+                                is_subject_of_type = tributary_state
+                            }
+                        }
+                    }
+                }
+                amount = 10
+            }
+            4239 = {
+                OR = {
+                    owned_by = ROOT
+                    owner = {
+                        is_subject_of = ROOT
+                        NOT = {
+                            is_subject_of_type = tributary_state
+                        }
+                    }
+                }
+                OR = {
+                    controlled_by = ROOT
+                    controller = {
+                        is_subject_of = ROOT
+                        NOT = {
+                            is_subject_of_type = tributary_state
+                        }
+                    }
+                }
+            }
+            NOT = {
+                any_subject_country = {
+                    is_subject_of = ROOT
+                    NOT = {
+                        is_subject_of_type = tributary_state
+                    }
+                    liberty_desire = 50
+                    any_owned_province = {
+                        OR = {
+                            area = slavonia_area
+                            area = croatia_area
+                            area = east_adriatic_coast_area
+                            area = bosnia_area
+                            area = serbia_area
+                            area = rascia_area
+                        }
+                    }
+                }
+            }
+        }
+        effect = {
+            custom_tooltip = ydt_establish_balkan_province_tt
+            hidden_effect = {
+                every_province = {
+                    limit = {
+                        OR = {
+                            area = slavonia_area
+                            area = croatia_area
+                            area = east_adriatic_coast_area
+                            area = bosnia_area
+                            area = serbia_area
+                            area = rascia_area
+                        }
+                        owner = {
+                            is_subject_of = ROOT
+                            NOT = {
+                                is_subject_of_type = tributary_state
+                            }
+                        }
+                    }
+                    cede_province = ROOT
+                }
+                every_province = {
+                    limit = {
+                        OR = {
+                            area = slavonia_area
+                            area = croatia_area
+                            area = east_adriatic_coast_area
+                            area = bosnia_area
+                            area = serbia_area
+                            area = rascia_area
+                        }
+                    }
+                    add_core = YBP
+                }
+                release = YBP
+                every_owned_province = {
+                    limit = {
+                        OR = {
+                            area = slavonia_area
+                            area = croatia_area
+                            area = east_adriatic_coast_area
+                            area = bosnia_area
+                            area = serbia_area
+                            area = rascia_area
+                        }
+                    }
+                    cede_province = YBP
+                }
+                create_subject = {
+                    subject_type = ydt_scarlet_province
+                    subject = YBP
+                }
+                YBP = {
+                    change_government = monarchy
+                    add_government_reform = ydt_scarlet_province_reform
+                    change_religion = ROOT
+                    set_capital = 4239
+                    capital_scope = {
+                        change_religion = animism
+                        add_reform_center = animism
+                    }
+                    every_owned_province = {
+                        add_core = YBP
+                        remove_core = ROOT
+                    }
+                }
+                set_country_flag = ydt_established_balkan_province
+            }
+        }
+    }
+    ydt_establish_prussian_province = {
+        major = yes
+        potential = {
+            tag = WAL
+            has_country_flag = ydt_unlocked_scarlet_provinces
+            mission_completed = ydt_abolish_the_knightly_orders
+            NOT = {
+                has_country_flag = ydt_established_prussian_province
+            }
+            NOT = {
+                exists = YPP
+            }
+        }
+        provinces_to_highlight = {
+            OR = {
+                area = west_prussia_area
+                area = east_prussia_area
+            }
+            OR = {
+                NOT = {
+                    OR = {
+                        owned_by = ROOT
+                        owner = {
+                            is_subject_of = ROOT
+                            NOT = {
+                                is_subject_of_type = tributary_state
+                            }
+                        }
+                    }
+                }
+                AND = {
+                    province_id = 43
+                    NOT = {
+                        OR = {
+                            controlled_by = ROOT
+                            controller = {
+                                is_subject_of = ROOT
+                                NOT = {
+                                    is_subject_of_type = tributary_state
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        allow = {
+            is_subject = no
+            is_at_war = no
+            calc_true_if = {
+                all_province = {
+                    OR = {
+                        area = west_prussia_area
+                        area = east_prussia_area
+                    }
+                    OR = {
+                        owned_by = ROOT
+                        owner = {
+                            is_subject_of = ROOT
+                            NOT = {
+                                is_subject_of_type = tributary_state
+                            }
+                        }
+                    }
+                }
+                amount = 5
+            }
+            43 = {
+                OR = {
+                    owned_by = ROOT
+                    owner = {
+                        is_subject_of = ROOT
+                        NOT = {
+                            is_subject_of_type = tributary_state
+                        }
+                    }
+                }
+                OR = {
+                    controlled_by = ROOT
+                    controller = {
+                        is_subject_of = ROOT
+                        NOT = {
+                            is_subject_of_type = tributary_state
+                        }
+                    }
+                }
+            }
+            NOT = {
+                any_subject_country = {
+                    is_subject_of = ROOT
+                    NOT = {
+                        is_subject_of_type = tributary_state
+                    }
+                    liberty_desire = 50
+                    any_owned_province = {
+                        OR = {
+                            area = west_prussia_area
+                            area = east_prussia_area
+                        }
+                    }
+                }
+            }
+        }
+        effect = {
+            custom_tooltip = ydt_establish_prussian_province_tt
+            hidden_effect = {
+                every_province = {
+                    limit = {
+                        OR = {
+                            area = west_prussia_area
+                            area = east_prussia_area
+                        }
+                        owner = {
+                            is_subject_of = ROOT
+                            NOT = {
+                                is_subject_of_type = tributary_state
+                            }
+                        }
+                    }
+                    cede_province = ROOT
+                }
+                every_province = {
+                    limit = {
+                        OR = {
+                            area = west_prussia_area
+                            area = east_prussia_area
+                        }
+                    }
+                    add_core = YPP
+                }
+                release = YPP
+                every_owned_province = {
+                    limit = {
+                        OR = {
+                            area = west_prussia_area
+                            area = east_prussia_area
+                        }
+                    }
+                    cede_province = YPP
+                }
+                create_subject = {
+                    subject_type = ydt_scarlet_province
+                    subject = YPP
+                }
+                YPP = {
+                    change_government = monarchy
+                    add_government_reform = ydt_scarlet_province_reform
+                    change_religion = ROOT
+                    set_capital = 43
+                    capital_scope = {
+                        change_religion = animism
+                        add_reform_center = animism
+                    }
+                    change_country_color = {
+                        color = {
+                            145
+                            35
+                            65
+                        }
+                    }
+                    every_owned_province = {
+                        add_core = YPP
+                        remove_core = ROOT
+                    }
+                }
+                set_country_flag = ydt_established_prussian_province
+            }
+        }
+    }
+    ydt_establish_greek_province = {
+        major = yes
+        potential = {
+            tag = WAL
+            has_country_flag = ydt_unlocked_scarlet_provinces
+            mission_completed = ydt_march_into_greece
+            NOT = {
+                has_country_flag = ydt_established_greek_province
+            }
+            NOT = {
+                exists = YGP
+            }
+        }
+        provinces_to_highlight = {
+            OR = {
+                area = thrace_area
+                area = macedonia_area
+                area = morea_area
+                area = northern_greece_area
+                area = albania_area
+            }
+            OR = {
+                NOT = {
+                    OR = {
+                        owned_by = ROOT
+                        owner = {
+                            is_subject_of = ROOT
+                            NOT = {
+                                is_subject_of_type = tributary_state
+                            }
+                        }
+                    }
+                }
+                AND = {
+                    province_id = 146
+                    NOT = {
+                        OR = {
+                            controlled_by = ROOT
+                            controller = {
+                                is_subject_of = ROOT
+                                NOT = {
+                                    is_subject_of_type = tributary_state
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        allow = {
+            is_subject = no
+            is_at_war = no
+            calc_true_if = {
+                all_province = {
+                    OR = {
+                        area = thrace_area
+                        area = macedonia_area
+                        area = morea_area
+                        area = northern_greece_area
+                        area = albania_area
+                    }
+                    OR = {
+                        owned_by = ROOT
+                        owner = {
+                            is_subject_of = ROOT
+                            NOT = {
+                                is_subject_of_type = tributary_state
+                            }
+                        }
+                    }
+                }
+                amount = 10
+            }
+            146 = {
+                OR = {
+                    owned_by = ROOT
+                    owner = {
+                        is_subject_of = ROOT
+                        NOT = {
+                            is_subject_of_type = tributary_state
+                        }
+                    }
+                }
+                OR = {
+                    controlled_by = ROOT
+                    controller = {
+                        is_subject_of = ROOT
+                        NOT = {
+                            is_subject_of_type = tributary_state
+                        }
+                    }
+                }
+            }
+            NOT = {
+                any_subject_country = {
+                    is_subject_of = ROOT
+                    NOT = {
+                        is_subject_of_type = tributary_state
+                    }
+                    liberty_desire = 50
+                    any_owned_province = {
+                        OR = {
+                            area = thrace_area
+                            area = macedonia_area
+                            area = morea_area
+                            area = northern_greece_area
+                            area = albania_area
+                        }
+                    }
+                }
+            }
+        }
+        effect = {
+            custom_tooltip = ydt_establish_greek_province_tt
+            hidden_effect = {
+                every_province = {
+                    limit = {
+                        OR = {
+                            area = thrace_area
+                            area = macedonia_area
+                            area = morea_area
+                            area = northern_greece_area
+                            area = albania_area
+                        }
+                        owner = {
+                            is_subject_of = ROOT
+                            NOT = {
+                                is_subject_of_type = tributary_state
+                            }
+                        }
+                    }
+                    cede_province = ROOT
+                }
+                every_province = {
+                    limit = {
+                        OR = {
+                            area = thrace_area
+                            area = macedonia_area
+                            area = morea_area
+                            area = northern_greece_area
+                            area = albania_area
+                        }
+                    }
+                    add_core = YGP
+                }
+                release = YGP
+                every_owned_province = {
+                    limit = {
+                        OR = {
+                            area = thrace_area
+                            area = macedonia_area
+                            area = morea_area
+                            area = northern_greece_area
+                            area = albania_area
+                        }
+                    }
+                    cede_province = YGP
+                }
+                create_subject = {
+                    subject_type = ydt_scarlet_province
+                    subject = YGP
+                }
+                YGP = {
+                    change_government = monarchy
+                    add_government_reform = ydt_scarlet_province_reform
+                    change_religion = ROOT
+                    set_capital = 146
+                    capital_scope = {
+                        change_religion = animism
+                        add_reform_center = animism
+                    }
+                    change_country_color = {
+                        color = {
+                            145
+                            35
+                            65
+                        }
+                    }
+                    every_owned_province = {
+                        add_core = YGP
+                        remove_core = ROOT
+                    }
+                }
+                set_country_flag = ydt_established_greek_province
+            }
+        }
+    }
+    ydt_establish_russian_province = {
+        major = yes
+        potential = {
+            tag = WAL
+            has_country_flag = ydt_unlocked_scarlet_provinces
+            mission_completed = ydt_crush_the_third_rome
+            NOT = {
+                has_country_flag = ydt_established_russian_province
+            }
+            NOT = {
+                exists = YRP
+            }
+        }
+        provinces_to_highlight = {
+            OR = {
+				region = russia_region
+				province_id = 1777
+			}
+            OR = {
+                NOT = {
+                    OR = {
+                        owned_by = ROOT
+                        owner = {
+                            is_subject_of = ROOT
+                            NOT = {
+                                is_subject_of_type = tributary_state
+                            }
+                        }
+                    }
+                }
+                AND = {
+                    province_id = 295
+                    NOT = {
+                        OR = {
+                            controlled_by = ROOT
+                            controller = {
+                                is_subject_of = ROOT
+                                NOT = {
+                                    is_subject_of_type = tributary_state
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        allow = {
+            is_subject = no
+            is_at_war = no
+            calc_true_if = {
+                all_province = {
+                    OR = {
+						region = russia_region
+						province_id = 1777
+					}
+                    OR = {
+                        owned_by = ROOT
+                        owner = {
+                            is_subject_of = ROOT
+                            NOT = {
+                                is_subject_of_type = tributary_state
+                            }
+                        }
+                    }
+                }
+                amount = 10
+            }
+            295 = {
+                OR = {
+                    owned_by = ROOT
+                    owner = {
+                        is_subject_of = ROOT
+                        NOT = {
+                            is_subject_of_type = tributary_state
+                        }
+                    }
+                }
+                OR = {
+                    controlled_by = ROOT
+                    controller = {
+                        is_subject_of = ROOT
+                        NOT = {
+                            is_subject_of_type = tributary_state
+                        }
+                    }
+                }
+            }
+            NOT = {
+                any_subject_country = {
+                    is_subject_of = ROOT
+                    NOT = {
+                        is_subject_of_type = tributary_state
+                    }
+                    liberty_desire = 50
+                    any_owned_province = {
+                        OR = {
+							region = russia_region
+							region = ural_region
+							province_id = 1777
+						}
+                    }
+                }
+            }
+        }
+        effect = {
+            custom_tooltip = ydt_establish_russian_province_tt
+            hidden_effect = {
+                every_province = {
+                    limit = {
+                        OR = {
+							region = russia_region
+							region = ural_region
+							province_id = 1777
+						}
+                        owner = {
+                            is_subject_of = ROOT
+                            NOT = {
+                                is_subject_of_type = tributary_state
+                            }
+                        }
+                    }
+                    cede_province = ROOT
+                }
+                every_province = {
+                    limit = {
+                        region = russia_region
+                    }
+                    add_core = YRP
+                }
+                every_province = {
+                    limit = {
+                        region = ural_region
+                    }
+                    add_core = YRP
+                }
+				1777 = {
+					add_core = YRP
+				}
+                release = YRP
+                every_owned_province = {
+                    limit = {
+                        region = russia_region
+                    }
+                    cede_province = YRP
+                }
+                every_owned_province = {
+                    limit = {
+                        region = ural_region
+                    }
+                    cede_province = YRP
+                }
+				1777 = {
+					if = {
+						limit = {
+							owned_by = ROOT
+						}
+						cede_province = YRP
+					}
+				}
+                create_subject = {
+                    subject_type = ydt_scarlet_province
+                    subject = YRP
+                }
+                YRP = {
+                    change_government = monarchy
+                    add_government_reform = ydt_scarlet_province_reform
+                    change_religion = ROOT
+                    set_capital = 295
+                    capital_scope = {
+                        change_religion = animism
+                        add_reform_center = animism
+                    }
+                    change_country_color = {
+                        color = {
+                            145
+                            35
+                            65
+                        }
+                    }
+                    every_owned_province = {
+                        add_core = YRP
+                        remove_core = ROOT
+                    }
+                }
+                set_country_flag = ydt_established_russian_province
+            }
+        }
+    }
+    ydt_establish_anatolian_province = {
+        major = yes
+        potential = {
+            tag = WAL
+            has_country_flag = ydt_unlocked_scarlet_provinces
+            mission_completed = ydt_pursue_the_ottoman_remnants
+            NOT = {
+                has_country_flag = ydt_established_anatolian_province
+            }
+            NOT = {
+                exists = YAP
+            }
+        }
+        provinces_to_highlight = {
+            region = anatolia_region
+            OR = {
+                NOT = {
+                    OR = {
+                        owned_by = ROOT
+                        owner = {
+                            is_subject_of = ROOT
+                            NOT = {
+                                is_subject_of_type = tributary_state
+                            }
+                        }
+                    }
+                }
+                AND = {
+                    province_id = 326
+                    NOT = {
+                        OR = {
+                            controlled_by = ROOT
+                            controller = {
+                                is_subject_of = ROOT
+                                NOT = {
+                                    is_subject_of_type = tributary_state
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        allow = {
+            is_subject = no
+            is_at_war = no
+            calc_true_if = {
+                all_province = {
+                    region = anatolia_region
+                    OR = {
+                        owned_by = ROOT
+                        owner = {
+                            is_subject_of = ROOT
+                            NOT = {
+                                is_subject_of_type = tributary_state
+                            }
+                        }
+                    }
+                }
+                amount = 15
+            }
+            326 = {
+                OR = {
+                    owned_by = ROOT
+                    owner = {
+                        is_subject_of = ROOT
+                        NOT = {
+                            is_subject_of_type = tributary_state
+                        }
+                    }
+                }
+                OR = {
+                    controlled_by = ROOT
+                    controller = {
+                        is_subject_of = ROOT
+                        NOT = {
+                            is_subject_of_type = tributary_state
+                        }
+                    }
+                }
+            }
+            NOT = {
+                any_subject_country = {
+                    is_subject_of = ROOT
+                    NOT = {
+                        is_subject_of_type = tributary_state
+                    }
+                    liberty_desire = 50
+                    any_owned_province = {
+                        region = anatolia_region
+                    }
+                }
+            }
+        }
+        effect = {
+            custom_tooltip = ydt_establish_anatolian_province_tt
+            hidden_effect = {
+                every_province = {
+                    limit = {
+                        region = anatolia_region
+                        owner = {
+                            is_subject_of = ROOT
+                            NOT = {
+                                is_subject_of_type = tributary_state
+                            }
+                        }
+                    }
+                    cede_province = ROOT
+                }
+                every_province = {
+                    limit = {
+                        region = anatolia_region
+                    }
+                    add_core = YAP
+                }
+                release = YAP
+                every_owned_province = {
+                    limit = {
+                        region = anatolia_region
+                    }
+                    cede_province = YAP
+                }
+                create_subject = {
+                    subject_type = ydt_scarlet_province
+                    subject = YAP
+                }
+                YAP = {
+                    change_government = monarchy
+                    add_government_reform = ydt_scarlet_province_reform
+                    change_religion = ROOT
+                    set_capital = 326
+                    capital_scope = {
+                        change_religion = animism
+                        add_reform_center = animism
+                    }
+                    change_country_color = {
+                        color = {
+                            145
+                            35
+                            65
+                        }
+                    }
+                    every_owned_province = {
+                        add_core = YAP
+                        remove_core = ROOT
+                    }
+                }
+                set_country_flag = ydt_established_anatolian_province
+            }
+        }
+    }
+	ydt_establish_polish_province = {
+        major = yes
+        potential = {
+            tag = WAL
+            has_country_flag = ydt_unlocked_scarlet_provinces
+            mission_completed = ydt_integrate_the_steppes
+            NOT = {
+                has_country_flag = ydt_established_polish_province
+            }
+            NOT = {
+                exists = YPL
+            }
+        }
+        provinces_to_highlight = {
+            region = poland_region
+            NOT = {
+                area = silesia_area
+            }
+            OR = {
+                NOT = {
+                    OR = {
+                        owned_by = ROOT
+                        owner = {
+                            is_subject_of = ROOT
+                            NOT = {
+                                is_subject_of_type = tributary_state
+                            }
+                        }
+                    }
+                }
+                AND = {
+                    province_id = 257
+                    NOT = {
+                        OR = {
+                            controlled_by = ROOT
+                            controller = {
+                                is_subject_of = ROOT
+                                NOT = {
+                                    is_subject_of_type = tributary_state
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        allow = {
+            is_subject = no
+            is_at_war = no
+            calc_true_if = {
+                all_province = {
+                    region = poland_region
+                    NOT = {
+                        area = silesia_area
+                    }
+                    OR = {
+                        owned_by = ROOT
+                        owner = {
+                            is_subject_of = ROOT
+                            NOT = {
+                                is_subject_of_type = tributary_state
+                            }
+                        }
+                    }
+                }
+                amount = 10
+            }
+            257 = {
+                OR = {
+                    owned_by = ROOT
+                    owner = {
+                        is_subject_of = ROOT
+                        NOT = {
+                            is_subject_of_type = tributary_state
+                        }
+                    }
+                }
+                OR = {
+                    controlled_by = ROOT
+                    controller = {
+                        is_subject_of = ROOT
+                        NOT = {
+                            is_subject_of_type = tributary_state
+                        }
+                    }
+                }
+            }
+            NOT = {
+                any_subject_country = {
+                    is_subject_of = ROOT
+                    NOT = {
+                        is_subject_of_type = tributary_state
+                    }
+                    liberty_desire = 50
+                    any_owned_province = {
+                        region = poland_region
+                        NOT = {
+                            area = silesia_area
+                        }
+                    }
+                }
+            }
+        }
+        effect = {
+            custom_tooltip = ydt_establish_polish_province_tt
+            hidden_effect = {
+                every_province = {
+                    limit = {
+                        region = poland_region
+                        NOT = {
+                            area = silesia_area
+                        }
+                        owner = {
+                            is_subject_of = ROOT
+                            NOT = {
+                                is_subject_of_type = tributary_state
+                            }
+                        }
+                    }
+                    cede_province = ROOT
+                }
+                every_province = {
+                    limit = {
+                        region = poland_region
+                        NOT = {
+                            area = silesia_area
+                        }
+                    }
+                    add_core = YPL
+                }
+                release = YPL
+                every_owned_province = {
+                    limit = {
+                        region = poland_region
+                        NOT = {
+                            area = silesia_area
+                        }
+                    }
+                    cede_province = YPL
+                }
+                create_subject = {
+                    subject_type = ydt_scarlet_province
+                    subject = YPL
+                }
+                YPL = {
+                    change_government = monarchy
+                    add_government_reform = ydt_scarlet_province_reform
+                    change_religion = ROOT
+                    set_capital = 257
+                    capital_scope = {
+                        change_religion = animism
+                        add_reform_center = animism
+                    }
+                    every_owned_province = {
+                        add_core = YPL
+                        remove_core = ROOT
+                    }
+                }
+                set_country_flag = ydt_established_polish_province
+            }
+        }
+    }
+	ydt_establish_steppe_province = {
+        major = yes
+        potential = {
+            tag = WAL
+            has_country_flag = ydt_unlocked_scarlet_provinces
+            mission_completed = ydt_integrate_the_steppes
+            NOT = {
+                has_country_flag = ydt_established_steppe_province
+            }
+            NOT = {
+                exists = YSP
+            }
+        }
+        provinces_to_highlight = {
+            OR = {
+                region = ruthenia_region
+                region = crimea_region
+            }
+            OR = {
+                NOT = {
+                    OR = {
+                        owned_by = ROOT
+                        owner = {
+                            is_subject_of = ROOT
+                            NOT = {
+                                is_subject_of_type = tributary_state
+                            }
+                        }
+                    }
+                }
+                AND = {
+                    province_id = 280
+                    NOT = {
+                        OR = {
+                            controlled_by = ROOT
+                            controller = {
+                                is_subject_of = ROOT
+                                NOT = {
+                                    is_subject_of_type = tributary_state
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        allow = {
+            is_subject = no
+            is_at_war = no
+            calc_true_if = {
+                all_province = {
+                    OR = {
+                        region = ruthenia_region
+                        region = crimea_region
+                    }
+                    OR = {
+                        owned_by = ROOT
+                        owner = {
+                            is_subject_of = ROOT
+                            NOT = {
+                                is_subject_of_type = tributary_state
+                            }
+                        }
+                    }
+                }
+                amount = 10
+            }
+            280 = {
+                OR = {
+                    owned_by = ROOT
+                    owner = {
+                        is_subject_of = ROOT
+                        NOT = {
+                            is_subject_of_type = tributary_state
+                        }
+                    }
+                }
+                OR = {
+                    controlled_by = ROOT
+                    controller = {
+                        is_subject_of = ROOT
+                        NOT = {
+                            is_subject_of_type = tributary_state
+                        }
+                    }
+                }
+            }
+            NOT = {
+                any_subject_country = {
+                    is_subject_of = ROOT
+                    NOT = {
+                        is_subject_of_type = tributary_state
+                    }
+                    liberty_desire = 50
+                    any_owned_province = {
+                        OR = {
+                            region = ruthenia_region
+                            region = crimea_region
+                        }
+                    }
+                }
+            }
+        }
+        effect = {
+            custom_tooltip = ydt_establish_steppe_province_tt
+            hidden_effect = {
+                every_province = {
+                    limit = {
+                        OR = {
+                            region = ruthenia_region
+                            region = crimea_region
+                        }
+                        owner = {
+                            is_subject_of = ROOT
+                            NOT = {
+                                is_subject_of_type = tributary_state
+                            }
+                        }
+                    }
+                    cede_province = ROOT
+                }
+                every_province = {
+                    limit = {
+                        OR = {
+                            region = ruthenia_region
+                            region = crimea_region
+                        }
+                    }
+                    add_core = YSP
+                }
+                release = YSP
+                every_owned_province = {
+                    limit = {
+                        OR = {
+                            region = ruthenia_region
+                            region = crimea_region
+                        }
+                    }
+                    cede_province = YSP
+                }
+                create_subject = {
+                    subject_type = ydt_scarlet_province
+                    subject = YSP
+                }
+                YSP = {
+                    change_government = monarchy
+                    add_government_reform = ydt_scarlet_province_reform
+                    change_religion = ROOT
+                    set_capital = 280
+                    capital_scope = {
+                        change_religion = animism
+                        add_reform_center = animism
+                    }
+                    every_owned_province = {
+                        add_core = YSP
+                        remove_core = ROOT
+                    }
+                }
+                set_country_flag = ydt_established_steppe_province
+            }
+        }
+    }
+	ydt_establish_baltic_province = {
+        major = yes
+        potential = {
+            tag = WAL
+            has_country_flag = ydt_unlocked_scarlet_provinces
+            mission_completed = ydt_integrate_the_steppes
+            NOT = {
+                has_country_flag = ydt_established_baltic_province
+            }
+            NOT = {
+                exists = YLP
+            }
+        }
+        provinces_to_highlight = {
+            region = baltic_region
+            NOT = {
+                area = west_prussia_area
+            }
+            NOT = {
+                area = east_prussia_area
+            }
+            OR = {
+                NOT = {
+                    OR = {
+                        owned_by = ROOT
+                        owner = {
+                            is_subject_of = ROOT
+                            NOT = {
+                                is_subject_of_type = tributary_state
+                            }
+                        }
+                    }
+                }
+                AND = {
+                    province_id = 38
+                    NOT = {
+                        OR = {
+                            controlled_by = ROOT
+                            controller = {
+                                is_subject_of = ROOT
+                                NOT = {
+                                    is_subject_of_type = tributary_state
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        allow = {
+            is_subject = no
+            is_at_war = no
+            calc_true_if = {
+                all_province = {
+                    region = baltic_region
+                    NOT = {
+                        area = west_prussia_area
+                    }
+                    NOT = {
+                        area = east_prussia_area
+                    }
+                    OR = {
+                        owned_by = ROOT
+                        owner = {
+                            is_subject_of = ROOT
+                            NOT = {
+                                is_subject_of_type = tributary_state
+                            }
+                        }
+                    }
+                }
+                amount = 10
+            }
+            38 = {
+                OR = {
+                    owned_by = ROOT
+                    owner = {
+                        is_subject_of = ROOT
+                        NOT = {
+                            is_subject_of_type = tributary_state
+                        }
+                    }
+                }
+                OR = {
+                    controlled_by = ROOT
+                    controller = {
+                        is_subject_of = ROOT
+                        NOT = {
+                            is_subject_of_type = tributary_state
+                        }
+                    }
+                }
+            }
+            NOT = {
+                any_subject_country = {
+                    is_subject_of = ROOT
+                    NOT = {
+                        is_subject_of_type = tributary_state
+                    }
+                    liberty_desire = 50
+                    any_owned_province = {
+                        region = baltic_region
+                        NOT = {
+                            area = west_prussia_area
+                        }
+                        NOT = {
+                            area = east_prussia_area
+                        }
+                    }
+                }
+            }
+        }
+        effect = {
+            custom_tooltip = ydt_establish_baltic_province_tt
+            hidden_effect = {
+                every_province = {
+                    limit = {
+                        region = baltic_region
+                        NOT = {
+                            area = west_prussia_area
+                        }
+                        NOT = {
+                            area = east_prussia_area
+                        }
+                        owner = {
+                            is_subject_of = ROOT
+                            NOT = {
+                                is_subject_of_type = tributary_state
+                            }
+                        }
+                    }
+                    cede_province = ROOT
+                }
+                every_province = {
+                    limit = {
+                        region = baltic_region
+                        NOT = {
+                            area = west_prussia_area
+                        }
+                        NOT = {
+                            area = east_prussia_area
+                        }
+                    }
+                    add_core = YLP
+                }
+                release = YLP
+                every_owned_province = {
+                    limit = {
+                        region = baltic_region
+                        NOT = {
+                            area = west_prussia_area
+                        }
+                        NOT = {
+                            area = east_prussia_area
+                        }
+                    }
+                    cede_province = YLP
+                }
+                create_subject = {
+                    subject_type = ydt_scarlet_province
+                    subject = YLP
+                }
+                YLP = {
+                    change_government = monarchy
+                    add_government_reform = ydt_scarlet_province_reform
+                    change_religion = ROOT
+                    set_capital = 38
+                    capital_scope = {
+                        change_religion = animism
+                        add_reform_center = animism
+                    }
+                    every_owned_province = {
+                        add_core = YLP
+                        remove_core = ROOT
+                    }
+                }
+                set_country_flag = ydt_established_baltic_province
+            }
+        }
+    }
+}
