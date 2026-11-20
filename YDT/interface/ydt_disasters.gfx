@@ -1,8 +1,0 @@
-spriteTypes = {
-    spriteType = {
-        name = "GFX_disaster_ydt_lunar_war"
-        texturefile = "gfx/interface/disasters/ydt_lunar_war.dds"
-        noOfFrames = 3
-        loadType = "INGAME"
-    }
-}

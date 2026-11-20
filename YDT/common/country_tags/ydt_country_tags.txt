@@ -1,8 +1,0 @@
-YBP = "countries/YDT Balkan Province.txt"
-YPP = "countries/YDT Prussian Province.txt"
-YGP = "countries/YDT Greek Province.txt"
-YRP = "countries/YDT Russian Province.txt"
-YAP = "countries/YDT Anatolian Province.txt"
-YPL = "countries/YDT Polish Province.txt"
-YSP = "countries/YDT Steppe Province.txt"
-YLP = "countries/YDT Baltic Province.txt"

@@ -1,6 +1,0 @@
-spriteTypes = {
-    spriteType = {
-        name = "mission_ydt_old_companions"
-        texturefile = "gfx/interface/missions/ydt_old_companions.dds"
-    }
-}

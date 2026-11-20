@@ -1,6 +1,0 @@
-spriteTypes = {
-    spriteType = {
-        name = "GFX_great_project_ydt_scarlet_mansion"
-        texturefile = "gfx/interface/great_projects/great_project_ydt_scarlet_mansion.dds"
-    }
-}
