@@ -10,7 +10,18 @@ cb_ydt_scarlet_invasion = {
                     }
                 }
             }
-            has_country_flag = ydt_scarlet_invasion_target_@ROOT
+            OR = {
+                has_country_flag = ydt_scarlet_invasion_target_@ROOT
+                AND = {
+                    has_country_flag = ydt_anathema_invasion_target_@ROOT
+                    NOT = {
+                        had_country_flag = {
+                            flag = ydt_anathema_invasion_target_@ROOT
+                            days = 3650
+                        }
+                    }
+                }
+            }
         }
     }
     war_goal = ydt_scarlet_invasion_wargoal

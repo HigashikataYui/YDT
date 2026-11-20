@@ -269,3 +269,28 @@
  desc_ydt_carpathian_administration:0 "Rce„v0W¹eCgÄgòT«ˆteTÿßuN„v?e…SNLˆ?e6R¦^M–NO†NôucÙGrW0W„vV/e0"
  ydt_carpathian_land_seizure:0 "6eÞVŽUSôT/–†˜0W"
  ydt_integrate_carpathia:0 "IuŽUSôT/–"
+ ydt_scarlet_grace:0 ")s¢u„vi`à`"
+ ydt_scarlet_grace_title:0 ")s¢u„vi`à`"
+ ydt_scarlet_grace_desc:0 "ˆmw§Y50§!¹p)s¢u<PÿOîvhýV¶RùRbýV„v‹Ya¦^ÐcØš§G25§!¹p0"
+ ydt_scarlet_grace_tooltip:0 "TîvhýV¶RPˆN§R)s¢u„vi`à`§!0"
+ ydt_scarlet_grace_alert_tooltip:0 ")s¢u„vi`à`"
+ ydt_scarlet_grace_opinion:0 ")s¢u„vi`à`"
+ ydt_scarlet_mansion:0 "¢uT›†™"
+ YPL:0 "âlpQLˆw"
+ YPL_ADJ:0 "âlpQLˆw"
+ ydt_establish_polish_province_title:0 "¾‹ËzâlpQLˆw"
+ ydt_establish_polish_province_desc:0 "SâlpQs^ŸS³ueQ)s¢uLˆw6R¦^ÿåNNS™l:N-NÃVú^Ëz°e„v0W¹eéy^0"
+ ydt_establish_polish_province_tt:0 "ú^Ëz^SýV§YâlpQLˆw§!ÿ^SýV‰|‹W:N§R)s¢uLˆw§!ÿ–™ýMOŽN§Y[257.GetName]§!0\nSbýV(W§YâlpQ§!0W:Såb	g„vhQèwýNˆcˆNå‹ýVÿv^OvQ·ƒ—Vå‹0W:S§YNb	gwýN„v8hÃV§!0\nå‹ýVžRLˆ§Y)s¢uLˆw6R§!0§Y[257.GetName]§!9e—R:N§YÛlupº‹§!ÿv^ú^Ëz§R)s¢u^y>y§!0"
+ YSP:0 "'YIƒŸSLˆw"
+ YSP_ADJ:0 "'YIƒŸSLˆw"
+ ydt_establish_steppe_province_title:0 "¾‹Ëz'YIƒŸSLˆw"
+ ydt_establish_steppe_province_desc:0 "ÎN,rBw/O³lTu0RË–„vN'kIƒŸSÿåNúW…:N-NÃVú^Ëz°e„v)s¢uLˆwÿSÙGrW0W³ueQsY‹s„véy^0"
+ ydt_establish_steppe_province_tt:0 "ú^Ëz^SýV§Y'YIƒŸSLˆw§!ÿ^SýV‰|‹W:N§R)s¢uLˆw§!ÿ–™ýMOŽN§Y[280.GetName]§!0\nSbýV(W§Yœ^X<SšN§!ŒT§YN'k'YIƒŸS§!0W:Såb	g„vhQèwýNˆcˆNå‹ýVÿv^OvQ·ƒ—Vå‹0W:S§YNb	gwýN„v8hÃV§!0\nå‹ýVžRLˆ§Y)s¢uLˆw6R§!0§Y[280.GetName]§!9e—R:N§YÛlupº‹§!ÿv^ú^Ëz§R)s¢u^y>y§!0"
+ YLP:0 "âlW„vLˆw"
+ YLP_ADJ:0 "âlW„vLˆw"
+ ydt_establish_baltic_province_title:0 "¾‹ËzâlW„vLˆw"
+ ydt_establish_baltic_province_desc:0 "åNÌ‘ R:N¢gËuÿSâlW„vwm¿l¸SNËzv–›Ry0W³ueQ)s¢uLˆw„véy^ÿ©‹sY‹s„va×Vµb¾S¹e0"
+ ydt_establish_baltic_province_tt:0 "ú^Ëz^SýV§YâlW„vLˆw§!ÿ^SýV‰|‹W:N§R)s¢uLˆw§!ÿ–™ýMOŽN§Y[38.GetName]§!0\nSbýV(W§YâlW„v§!0W:Såb	g„vhQèwýNˆcˆNå‹ýVÿv^OvQ·ƒ—Vå‹0W:S§YNb	gwýN„v8hÃV§!0\nå‹ýVžRLˆ§Y)s¢uLˆw6R§!0§Y[38.GetName]§!9e—R:N§YÛlupº‹§!ÿv^ú^Ëz§R)s¢u^y>y§!0"
+ ydt_integrate_the_steppes_province_tt:0 "ã‰•àQy˜³Q®‹ÿAQ¸‹bìN(Wµc6RâlpQÿ'YIƒŸSbâlW„vöeSÙ›N0W:SÊ‘>e:N§R)s¢uLˆw§!0"
+ ydt_wallachian_construction_local:0 "ætÉbàQšNú^¾‹bœg"
+ desc_ydt_wallachian_construction_local:0 "ùR,gWú^¾‹„vcíu•beQ9e„U†NSV0WuµNN%„ú^agöN0dkîOckÅN(Wå‹wýN1uŒRbú^¾‹ûN¡R„výV¶Råb	göeuHe0"

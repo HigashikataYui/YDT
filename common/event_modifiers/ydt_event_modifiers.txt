@@ -6,12 +6,6 @@ ydt_gold_mining_regulations = {
     monthly_gold_inflation_modifier = -0.90
 }
 
-ydt_wallachian_construction = {
-    global_trade_goods_size = 1
-    build_cost = -0.10
-    build_time = -0.10
-}
-
 ydt_estates_under_control = {
     all_estate_influence_modifier = -0.10
 }
@@ -56,6 +50,7 @@ ydt_flandre_companion = {
 ydt_remilia_matured_modifier = {
     diplomatic_reputation = 2
     global_unrest = -2
+	monthly_ydt_scarlet_value = -0.2
 }
 
 ydt_integrated_the_steppes = {
@@ -93,7 +88,7 @@ ydt_bulgarian_campaign = {
 }
 
 ydt_scarlet_ascendancy = {
-    ydt_scarlet_value_gain_modifier = 0.50
+    ydt_scarlet_value_gain_modifier = 0.25
 }
 
 ydt_legacy_of_the_knightly_orders = {

@@ -2580,7 +2580,7 @@ NReligion = {
 
 	RELIGIOUS_LEAGUE_COOLDOWN = 5,								-- Minimum years between joining/leaving religious league
 	RELIGIOUS_LEAGUE_WAR_BONUS_DURATION = 100,					-- How many years the 'Joined League War' bonus lasts
-	MAX_CHRISTIAN_RELIGIOUS_CENTERS = 6,						-- The number of spawned centers of reformation wont exceed this number
+	MAX_CHRISTIAN_RELIGIOUS_CENTERS = 10,						-- The number of spawned centers of reformation wont exceed this number
 	MAX_RELIGIOUS_CENTER_SPREAD_DISTANCE = 150.0,				-- When spreading the religion to other provinces the distance wont exceed this number
 	CONVERSION_ZEAL_DURATION = 10950,							-- Amount of days in which you cannot convert the province back.
 	KARMA_FOR_CONVERSION = 0.1,

@@ -10,7 +10,7 @@ ydt_dissolved_dragon_order_negative = {
 
 ydt_scarlet_anathema_resentment = {
     opinion = -100
-    yearly_decay = 2.5
+    yearly_decay = 5
 }
 
 ydt_abolished_knightly_orders_resentment = {
@@ -20,5 +20,10 @@ ydt_abolished_knightly_orders_resentment = {
 
 ydt_carpathian_land_seizure = {
     opinion = -25
+    yearly_decay = 1
+}
+
+ydt_scarlet_grace_opinion = {
+    opinion = 25
     yearly_decay = 1
 }
